@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="./js/mta.js"></script>
+    <title>MTA</title>
+  </head>
+  <body>
+    <h1>Travel Station planning</h1>
+    <p>Please select a starting line</p>
+    <select id="startLine">
+      <option value="N">N line</option>
+      <option value="L">L line</option>
+      <option value="6">6th line</option>
+    </select>
+    <p>Please select a starting station from the same line you start in</p>
+    <select id="start">
+      <optgroup label="N line">
+        <option value="Times Square">Times Square</option>
+        <option value="34th">34th</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="8th">8th</option>
+      </optgroup>
+      <optgroup label="L line">
+        <option value="8th">8th</option>
+        <option value="6th">6th</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </optgroup>
+      <optgroup label="6 line">
+        <option value="Grand Central">Grand Central</option>
+        <option value="33rd">33rd</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="Astor Place">Astor Place</option>
+      </optgroup>
+    </select>
+    <p>Please select an ending line</p>
+    <select id="endLine">
+      <option value="N">N line</option>
+      <option value="L">L line</option>
+      <option value="6">6th line</option>
+    </select>
+    <p>Please select an ending station from the same line you end in</p>
+    <select id="end">
+      <optgroup label="N line">
+        <option value="Times Square">Times Square</option>
+        <option value="34th">34th</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="8th">8th</option>
+      </optgroup>
+      <optgroup label="L line">
+        <option value="8th">8th</option>
+        <option value="6th">6th</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </optgroup>
+      <optgroup label="6 line">
+        <option value="Grand Central">Grand Central</option>
+        <option value="33rd">33rd</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="Astor Place">Astor Place</option>
+      </optgroup>
+    </select>
+    <div>
+      <p><button id="submit">Click here to see your travel</button></p>
+    </div>
+    <div>
+      <h1 id="travel-info"></h1>
+    </div>
+  </body>
+</html>
