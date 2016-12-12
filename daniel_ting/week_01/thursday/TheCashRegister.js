@@ -10,9 +10,7 @@ var cartForParty = {
 var cashRegister = function(cart) {
   var sum = 0;
   for (var item in cart) {
-    if (cart.hasOwnProperty(item)) {
-      sum += parseFloat(cart[item]);
-    }
+    sum += parseFloat(cart[item]);
   }
   return sum;
 }
