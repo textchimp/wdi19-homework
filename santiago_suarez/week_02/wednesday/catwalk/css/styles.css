@@ -1,0 +1,30 @@
+body {
+  opacity: 0.8;
+}
+
+button {
+  position: absolute;
+  left: 700px;
+  top: 150px;
+  height: 40px;
+  width: 200px;
+  display: inline-block;
+  background-color: red;
+}
+
+.boring {
+  background-color: blue;
+  top: 220px;
+}
+
+.rick {
+  position: absolute;
+  right: 50px;
+  visibility: hidden;
+}
+
+.trippy {
+  visibility: hidden;
+  height: 400px;
+  width: 400px;
+}
