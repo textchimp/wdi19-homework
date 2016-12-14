@@ -182,7 +182,7 @@ var object_validateCreditCard = function(string) {
             whyerror.push("odd_final_number");
         }
         if (! issumgreaterthan16(new_string)) {
-            whyerror.push("sum_less_than_16");
+            whyerror.push("sum_not_greater_than_16");
         }
         return {
             valid : validateCreditCard(string),
@@ -191,4 +191,7 @@ var object_validateCreditCard = function(string) {
       }
     }
 
-  console.log(object_validateCreditCard('9999-9999-8888-0000'));
+console.log(object_validateCreditCard('9999-9999-8888-0000').error);
+console.log(object_validateCreditCard('a923-3211-9c01-1112').error);
+console.log(object_validateCreditCard('1111-1111-1111-1110').error);
+console.log(object_validateCreditCard('6666-6666-6666-6661').error);
