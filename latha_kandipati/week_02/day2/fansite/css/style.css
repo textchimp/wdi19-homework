@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+*{
+  /*border: 1px solid black;*/
+  /*box-sizing: border-box;*/
+}
+body{
+  background-color: black;
+  margin: 0 auto;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #e6e6e6;
+  padding-top: 1em;
+}
+h1{
+  margin-left: 1em;
+  padding: 1em;
+}
+nav{
+  text-align: right;
+  background-color: #333;
+  padding: 1em;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+}
+nav a:hover{
+  color: pink;
+}
+main{
+  display: inline-block;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  width: 60%;
+}
+main img{
+  width: 300px;
+  height: 300px;
+  padding-right: 2em;
+  padding-bottom: 1.5em;
+  float: left;
+}
+ p{
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.clear{
+  clear: both;
+}
+aside{
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+aside ul li{
+  font-size: 14px;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: #333;
+  padding: 1em;
+  color: white;
+}
+article{
+  padding: 2em;
+}
+.image1{
+  width: 300px;
+  height: 300px;
+  padding: 1.5em;
+  float: left;
+}
+.image2{
+  width: 400px;
+  height: 300px;
+  padding: 1.5em;
+  float: right;
+}
+.image3{
+  width: 400px;
+  height: 300px;
+  padding: 1.5em;
+  float: left;
+}
+iframe{
+  float: right;
+}

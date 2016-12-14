@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Catamaran:300');
+
+
+* {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+div, a, p {
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+  color: #ccc;
+  font-family: 'Catamaran', serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4em;
+  letter-spacing: 0.1em;
+}
+
+header {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Amiri', sans-serif;
+  color: #a86b3c;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 7px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+nav, section, main {
+  border-bottom: 2px solid #ccc;
+}
+
+nav {
+  background-color: #333;
+  border-top: 2px solid #ccc;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 15px;
+  margin: 0;
+  width: 145px;
+}
+
+.main-nav a:hover {
+  background-color: #a86b3c;
+  color: #ccc;
+}
+
+.main-nav a.current {
+  background-color: #a86b3c;
+  color: #ccc;
+}
+
+section {
+  background-color: #444;
+  position: relative;
+  /*height: 418px;*/
+}
+
+section img {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  /*position: relative;
+  top: -100px;*/
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 40px 0;
+}
+
+section blockquote {
+  font-family: 'Amiri', sans-serif;
+  font-size: 27px;
+  letter-spacing: 3px;
+  line-height: 1.1em;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  margin: 110px 0 0 70px;
+}
+
+section blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 70px;
+  position: absolute;
+  left: -35px;
+  top: 10px;
+}
+
+main {
+  background-color: #333;
+}
+
+main p {
+  padding-bottom: 40px;
+  text-align: justify;
+}
+
+main img.inline {
+  display: inline-block;
+  height: 275px;
+  margin: 20px 0 40px 0;
+}
+
+main img.floated {
+  float: left;
+  width: 200px;
+  margin-right: 40px;
+}
+
+footer {
+  font-family: 'Amiri', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  background-color: #a86b3c;
+  color: #ccc;
+}
