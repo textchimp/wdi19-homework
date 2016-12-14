@@ -27,6 +27,7 @@ var arraysEqual = function (word, guess) { // a little bit of google and stack o
 }
 
 var guess = function(letter){
+  letter = letter.toUpperCase();
   var found = false;
   for (var i = 0; i < wordLetters.length; i++) {
     if (letter === wordLetters[i]){
