@@ -1,24 +1,20 @@
-var N = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'];
-var L = ['8th', '6th', 'Union Square', '3rd', '1st'];
-var six = ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place'];
+var lines = {
+  N: ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'],
+  L: ['8th', '6th', 'Union Square', '3rd', '1st'],
+  6: ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place'],
+}
 
 var planTrip = function (srcLine, srcStation, dstLine, dstStation){
-  var s = eval(srcLine);
-  var d = eval(dstLine);
-  if (srcLine === "6") { s = six; }
-  if (dstLine === "6") { d = six; }
+  var s = lines[srcLine];
+  var d = lines[dstLine];
   var listOfStations_l1 = [];
   var listOfStations_l2 = [];
 // Possiblity 1: if on the same line
   if (srcLine === dstLine) {
     if (s.indexOf(dstStation) < s.indexOf(srcStation)) {  s = s.reverse();  }
-    for (var i = s.indexOf(srcStation) + 1; i <= s.indexOf(dstStation); i++) {
-      if (d.indexOf(s[i]) > 0 ) { s[i] += (" on the " + srcLine); }
-      listOfStations_l1.push(s[i]);
-    }
     console.log("Your must travel through the following stops on the " + srcLine + " line: " +
     listOfStations_l1.join(', ')
-    + ".\n" + (listOfStations_l1.length + listOfStations_l2.length) + " stops in total.");
+    + ".\n" + (listOfStations_l1.length) + " stops in total.");
   } else {
 // Possiblity 2: not on the same line
     if (s.indexOf('Union Square') < s.indexOf(srcStation)) {  s = s.reverse();  }
