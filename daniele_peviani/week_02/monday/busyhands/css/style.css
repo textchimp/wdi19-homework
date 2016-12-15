@@ -1,0 +1,132 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+img {
+  display: block;
+}
+
+.container, .blurbContainer {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url("../images/bg_wrapper.png");
+  background-repeat: repeat-x;
+  height: 488px;
+}
+
+.mainNav {
+  color: white;
+  line-height: 85px;
+}
+
+.mainNav li {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Helvetica;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: white;
+  padding: 33px 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.mainNav a:hover {
+  background-image: url("../images/bg_nav_rollover.png");
+  background-repeat: repeat-x;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+}
+
+.social {
+  text-align: right;
+  width: 665px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social li a {
+  display: block;
+  height: 54px;
+  width: 54px;
+  background-image: url("../images/socialNav.png");
+}
+
+.linkedin a {
+  background-position: -3px -62px;
+}
+.twitter a {
+  background-position: -62px 62px;
+}
+.facebook a {
+  background-position: -122px 62px;
+}
+.rss a {
+  background-position: -179px 62px;
+}
+
+.linkedin a:hover {
+  background-position: -3px -2px;
+}
+.twitter a:hover {
+  background-position: -62px -2px;
+}
+.facebook a:hover {
+  background-position: -122px -2px;
+}
+.rss a:hover {
+  background-position: -179px -2px;
+}
+
+.heroImg {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+main {
+  background-image: url("../images/bg_body.jpg");
+}
+
+.blurbContainer {
+  padding-top: 150px;
+}
+
+.blurb {
+  padding: 10px;
+  border-top: 1px solid #999999;
+  border-left: 1px solid #999999;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+.blurb p {
+  display: inline-block;
+  vertical-align: top;
+  width: 65%;
+  margin-right: 100px;
+}
+
+.blurb .btnCta {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url('../images/button_blurb.png');
+  height: 50px;
+  width: 202px;
+}
