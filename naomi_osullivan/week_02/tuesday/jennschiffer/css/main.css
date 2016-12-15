@@ -1,0 +1,117 @@
+/*@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');*/
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+/** {
+  border: 1px solid pink;
+}*/
+.container {
+  width: 960px;
+  margin: 0 auto;
+  /*background-color: blue;*/
+}
+body {
+  /*font-family: 'Reenie Beanie', cursive;*/
+  font-family: 'Poiret One', cursive;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+}
+
+nav {
+  text-align: center;
+}
+.link {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+main img {
+  display: inline-block;
+  width: 16.18%;
+  padding: 0;
+  margin-top: 3em;
+
+}
+.who {
+  display: block;
+  margin-top: 8em;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.socialmedia {
+  text-align: center;
+  display: block;
+  margin-top: 10%;
+  text-decoration: none;
+  margin-bottom: 75px;
+}
+h4 {
+  margin-bottom: 2em;
+
+}
+.twitter {
+  border: 1px solid #03c6cb;
+  padding: 3%;
+  border-radius: 100%;
+  background-color: rgba(3,198,203,0.1);
+}
+.instagram {
+  border: 1px solid #03c6cb;
+  padding: 3%;
+  border-radius: 100%;
+  background-color: rgba(3,198,203,0.1);
+}
+.website {
+  border: 1px solid #03c6cb;
+  padding: 3%;
+  border-radius: 100%;
+  background-color: rgba(3,198,203,0.1);
+}
+.github {
+  border: 1px solid #03c6cb;
+  padding: 3%;
+  border-radius: 100%;
+  background-color: rgba(3,198,203,0.1);
+}
+a {
+  text-decoration: none;
+  color: #03c6cb;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+}
+.why {
+  display: block;
+  margin-top: 8em;
+  text-align: center;
+}
+.misc {
+  display: block;
+  margin-top: 8em;
+  text-align: center;
+}
+.location {
+  display: inline-block;
+}
+.tweets {
+  display: block;
+  width: 400px;
+  margin: 10px auto;
+
+}
+
+/*#map {
+  width: 30%;
+  height: 400px;
+  background-color: grey;
+}*/
