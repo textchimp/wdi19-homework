@@ -28,20 +28,25 @@ header {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Amiri', sans-serif;
   color: #a86b3c;
-  text-align: center;
 }
 
 h1 {
   font-size: 60px;
   letter-spacing: 7px;
   padding: 20px;
+  text-align: center;
 }
 
 h2 {
   font-size: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 nav, section, main {
@@ -144,4 +149,40 @@ footer {
   padding: 10px;
   background-color: #a86b3c;
   color: #ccc;
+}
+
+.trivia ul{
+  list-style: none;
+}
+
+.trivia li {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  height: 350px;
+  background-color: rgba(204,204,204,.1);
+  border-radius: 5px;
+  margin: 80px 70px 0 10px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 5px 5px 5px #303030;
+}
+
+.trivia span {
+  position: absolute;
+  right: 3px;
+  bottom: 5px;
+  font-family: 'Amiri', sans-serif;
+  font-size: 45px;
+  color: rgba(204,204,204,.05);
+}
+
+.trivia h3 {
+  margin: 0;
+  color: #ccc;
+}
+
+.trivia p{
+  margin-top: 20px;
+  text-align: left;
 }
