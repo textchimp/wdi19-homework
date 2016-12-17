@@ -85,6 +85,7 @@ ul.topnav {
  }
 
 div.transboxright {
+    position: relative; 
     float: right;
     padding: 0px;
     margin-top: 42%;
