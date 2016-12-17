@@ -1,0 +1,26 @@
+.demo {
+  border: 1px solid pink;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+  margin: 20px;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}

@@ -15,7 +15,7 @@ var mtr_s = ['Kwun Tong', 'Tsuen Wan', 'Island', 'Tseung Kwan O - Po Lam', 'Tseu
 var db = {};
 
 var Station = function(name) {
-  this.name = name
+  this.name = name;
   this.adjacentStations = [];
   this.lines = [];
   this.distance = Infinity;

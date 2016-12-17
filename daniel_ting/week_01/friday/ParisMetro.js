@@ -24,7 +24,7 @@ var lines_s = ['ligne 1', 'ligne 2', 'ligne 3', 'ligne 3 bis', 'ligne 4', 'ligne
 var db = {};
 
 var Station = function(name) {
-  this.name = name
+  this.name = name;
   this.adjacentStations = [];
   this.lines = [];
   this.distance = Infinity;
