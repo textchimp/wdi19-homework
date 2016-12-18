@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Grace Hopper</title>
+</head>
+<body>
+  <div id="container">
+    <nav class='sidebar'>
+      <ul>
+        <li>
+          <a href="#home">
+            <i class="fa fa-home fa-3x"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <i class="fa fa-user fa-3x"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a href="#skills">
+            <i class="fa fa-keyboard-o fa-3x"></i>
+            <p>Skills</p>
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <i class="fa fa-location-arrow fa-3x"></i>
+            <p>Contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="home"></div>
+    <header>
+      <h1>I'M GRACE HOPPER.</h1>
+      <h3>Computer Scientist and Navy Admiral</h3>
+    </header>
+    <div id='main-image'></div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h3>Grace Brewster Murray Hopper</h3>
+      <hr>
+      <p>
+        I was born on December 9, 1906, am a computer scientist and currently on
+        the Navy as an Admiral, I've programmed on the Harvard Mark I computer
+        and also invented the first compiler for a computer programming language.
+        The idea of machine-independent programming languages was popularized by
+        me and because of that COBOL was developed. Also the term bug comes from
+        me, funny story that one.
+        I was also awarded this past November 22 the Presidential Medal of Freedom!!
+      </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <div id="skills">
+      <h3>My skills</h3>
+      <hr>
+      <p>Programming</p>
+      <div class="meter">
+        <span style="width: 100%"></span>
+      </div>
+      <p>Military</p>
+      <div class="meter">
+        <span style="width: 95%"></span>
+      </div>
+      <p>Debugging</p>
+      <div class="meter">
+        <span style="width: 100%"></span>
+      </div>
+      <br>
+      <div id="references">
+        <h3>My Reputation</h3>
+        <hr>
+        <div class="review">
+          <img src="http://akphoto3.ask.fm/068/356/553/60003036-1s6hnk3-58606nlf3tidakp/original/avatar.jpg" class="avatar">
+          <p class='desc'><span>Bug.</span> Bug stuck on relay.</p>
+          <p>Grace found me stuck and saved me! Also the relay started working after that, FIRST DEBUGGING SUCCESFUL!.</p><br>
+        </div>
+        <div class="review">
+          <img src="https://www.army.mil/e2/c/images/2012/09/11/263412/size0.jpg" class="avatar">
+          <p class='desc'><span>Military man.</span> General in something military.</p>
+          <p>Yes Hopper here is really military can kill much bugs.</p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+      <h3>Contact me</h3>
+      <hr>
+      <p><i class="fa fa-map-marker fa-2x"></i>Location: The Underworld</p><br>
+      <p><i class="fa fa-phone fa-2x"></i>Phone: 666 6666 666</p><br>
+      <p><i class="fa fa-envelope fa-2x"></i>Email: janne@arpanet.org</p><br>
+      <br><br>
+    </div>
+  </div>
+
+  <div id="map"></div>
+    <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -26.8979375, lng: 152.8781481},
+        zoom: 15
+      });
+
+      var infowindow = new google.maps.InfoWindow();
+      var service = new google.maps.places.PlacesService(map);
+
+      service.getDetails({
+        placeId: 'ChIJY3m1O3GJk2sRQw99ExK8jRs'
+      }, function(place, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
+          });
+        }
+      });
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsF9P0Y_6-jOfJFu4z7shxnSx6vaiTJCA&callback=initMap">
+    </script>
+</body>
+</html>
