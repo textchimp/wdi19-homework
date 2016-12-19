@@ -1,0 +1,18 @@
+body {
+  background-color: pink;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: purple;
+}
+
+.box {
+  border: 1px solid black;
+  width: 110px;
+  margin-top: 100px;
+  padding: 20px;
+}

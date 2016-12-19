@@ -37,6 +37,8 @@
 //stops is Array of string
 //[ stop1, stop2,....]
 
+
+
 var stops_N = [
                 "Times_Square_N",
                 "34th_N" ,
@@ -159,7 +161,7 @@ var stp_before_inter = function(begin_line, begin_stp, desti_line)  {
       stp.push(begin_line[i]);
     }
   } else {
-    for (var i = begin_line.indexOf(begin_stp)-1; i < begin_line.length; i--) {
+    for (var i = begin_line.indexOf(begin_stp)+1; i < begin_line.length; i--) {
       for (var j = 0; j < desti_line.length; j++) {
         if (desti_line[j] === begin_line[i]) {
           stp.push(begin_line[i]);
@@ -251,6 +253,7 @@ function Journey(str_begin_line, begin_stp, str_desti_line, desti_stp) {
 }
 
 var planTrip = function (str_begin_line, begin_stp, str_desti_line, desti_stp) {
+  debugger;
     var planedjourney = new Journey(str_begin_line, begin_stp, str_desti_line, desti_stp)
       if (planedjourney.doesinter) {
         return  "You must travel through the following stops on the "+str_begin_line+" line: "+ planedjourney.stp_before_inter.join(', ')+".\n"+
@@ -266,9 +269,11 @@ var planTrip = function (str_begin_line, begin_stp, str_desti_line, desti_stp) {
 }
 
 console.log("Test for planTrip");
-console.log(planTrip('N', 'Times_Square_N', '6', '33rd_6'));
-console.log(planTrip('L', '1st_L', 'N', 'Times_Square_N'));
-//console.log(planTrip('N', 'Times_Square_N', 'N', '8th-N'));
+// console.log(planTrip('N', 'Times_Square_N', '6', '33rd_6'));
+// console.log(planTrip('L', '1st_L', 'N', 'Times_Square_N'));
+
+console.log(planTrip('N', 'Times_Square_N', 'N', '8th_N'));
+
 //- where the stops getting on and off are the same
 //-> This is the case that does not work, and I can not fix it( like an infinity loop)
 

@@ -1,0 +1,153 @@
+
+#wrapper2 {
+  width: 100%;
+  height: 350px;
+  background-color: black;
+  float : left;
+  margin: 0 auto;
+  padding-left: 10%;
+}
+
+
+#container {
+  width: 80%;
+  align-content: center;
+  margin: 0 auto;
+}
+
+
+img.logo {
+  display: inline-block;
+}
+
+
+.social {
+   display: inline-block;
+   float: right;
+   width: 280px;
+   vertical-align: top;
+   margin-right: 0px
+ }
+
+ .social li {
+   display: inline-block;
+ }
+
+ .social li a {
+   display: block;
+   height: 50px;
+   width: 50px;
+   background-image: url("../images/socialNav.png");
+ }
+
+ .linkedin a {
+   background-position: -3px -62px;
+ }
+ .twitter a {
+   background-position: -62px 62px;
+ }
+ .facebook a {
+   background-position: -122px 62px;
+ }
+ .rss a {
+   background-position: -179px 62px;
+ }
+
+ .linkedin a:hover {
+   background-position: -3px -2px;
+ }
+ .twitter a:hover {
+   background-position: -62px -2px;
+ }
+ .facebook a:hover {
+   background-position: -122px -2px;
+ }
+ .rss a:hover {
+   background-position: -179px -2px;
+ }
+
+ul.topnav {
+   margin-top: 0;
+   padding: 0;
+   overflow: hidden;
+   background: #000000;
+   position: relative;
+   list-style-type: none;
+   text-align: left;
+   padding-left: 80px;
+ }
+
+ ul.topnav li {
+   display: inline-block;
+   max-width: 100%;
+   margin: 0 auto;
+ }
+
+ ul.topnav li a {
+   display: block;
+   color: white;
+   text-decoration: none;
+   padding: 20px 15px;
+
+ }
+
+ ul.topnav li a:hover {
+
+  background-image: url("../images/bg_nav_rollover.png");
+   border-image-width: 5px 0 0 0;
+ }
+
+ img {
+   max-width: 100%;
+   height: auto;
+ }
+
+.box-button {
+  width: 100%;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.box-button p{
+  float: left;
+  display: inline;
+  width: 70%;
+}
+
+.box-button a {
+  margin-right: 0px;
+  display: block;
+}
+
+
+h1 {
+  clear: both;
+}
+
+.home-box, .box-footer {
+  clear: both;
+  width: 250px;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.home-box p{
+  display: block;
+  width: 100%;
+}
+
+.box-footer *{
+  display: block;
+  color: white;
+}
+
+#copyright {
+  display: block;
+  clear: both;
+}
+
+#companybottom {
+  display: block;
+  clear: both;
+}
