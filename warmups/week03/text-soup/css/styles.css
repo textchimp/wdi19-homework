@@ -12,5 +12,5 @@ body{
   font-size: 60pt;
   color: #FFF;
   display: none; /* start with our word divs hidden, so they will fade in nicely */
-  position: absolute; /* position will need to be absolute so we can use jQuery to place our divs randomly */ 
+  position: absolute; /* position will need to be absolute so we can use jQuery to place our divs randomly */
 }
