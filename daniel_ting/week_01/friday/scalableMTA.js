@@ -7,7 +7,7 @@ var mtr_s = ['N', 'L', 'six'];
 var db = {};
 
 var Station = function(name) {
-  this.name = name
+  this.name = name;
   this.adjacentStations = [];
   this.lines = [];
   this.distance = Infinity;
