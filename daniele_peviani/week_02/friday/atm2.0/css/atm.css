@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100');
+
+div {
+  display: block;
+  box-sizing: border-box;
+}
+
+*, .container {
+  font-family: 'Work Sans', sans-serif;
+}
+
+button, input {
+  outline: none;
+  border: 0;
+}
+
+.container {
+  width: 350px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  color: rgb(100, 100, 100);
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.account {
+  cursor: pointer;
+  cursor: hand;
+  padding: 10px;
+  margin-bottom: 1px;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(34, 205, 0);
+  color: rgb(255, 255, 255);
+}
+
+.zero {
+  background-color: rgb(255, 0, 00);
+  color: rgb(255, 255, 255);
+}
+
+.zero.selected {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.selected {
+  border: 5px solid rgb(139, 198, 255);
+  background-color: rgb(34, 205, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.balance {
+  font-size: 4em;
+  position: relative;
+  display: inline-block;;
+  padding-bottom: 10px;
+}
+
+.balance span {
+  content: "$";
+  font-size: 0.3em;
+  position: absolute;
+  left: -15px;
+  top: 9px;;
+}
+
+.options {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/*.transType, .amount {
+  margin-bottom: 20px;
+}*/
+
+.transType button {
+  cursor: pointer;
+  cursor: hand;
+  font-size: 1em;
+  margin: 20px 0;
+  display: inline-block;
+  padding: 10px 0;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(230, 230, 230);
+  min-width: 100px;
+}
+
+.transType .active {
+  background-color: rgb(139, 198, 255);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(139, 198, 255);
+}
+
+.amount input {
+  border-bottom: 1px solid rgb(230, 230, 230);
+  background-color: rgb(250, 250, 250);
+  color: rgb(139, 198, 255);
+  margin: 10px 0;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  font-size: 2em;
+}
+
+#executeTransfer {
+  cursor: pointer;
+  cursor: hand;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(139, 198, 255);
+  padding: 10px 15px;
+  margin: 20px 0;
+  width: 200px;
+}
+
+#executeTransfer:hover {
+  color: rgb(139, 198, 255);
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(139, 198, 255);
+}
+
+
+/*            */
+/* Typography */
+/*            */
+
+h1 {
+  font-size: 1.3em;
+}
+
+h2 {
+  font-size: 1em;
+}
