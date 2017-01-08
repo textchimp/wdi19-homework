@@ -1,0 +1,24 @@
+.invisible {
+  display: none;
+}
+
+.slideshow {
+  position: relative;
+  height: 150px;
+}
+
+.bill {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.magic {
+  text-align: center;
+  display: inline-block;
+  width: 30%;
+  background-color: pink;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  padding-bottom: 1em;
+}
