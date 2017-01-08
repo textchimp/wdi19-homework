@@ -115,6 +115,7 @@ var stp_nochangeline = function(line, begin_stp, desti_stp) {
 
 console.log("Test for stp_nochangeline")
 console.log(stp_nochangeline(stops_N ,"Times_Square_N" ,"34th_N"));
+console.log(stp_nochangeline(stops_N ,"Times_Square_N" ,"8th_N"));
 console.log(stp_nochangeline(stops_N ,"34th_N" ,"Times_Square_N"));
 console.log(stp_nochangeline(stops_N ,"8th_N" ,"34th_N"));
 console.log(stp_nochangeline(stops_N ,"34th_N" ,"8th_N"));
@@ -161,7 +162,7 @@ var stp_before_inter = function(begin_line, begin_stp, desti_line)  {
       stp.push(begin_line[i]);
     }
   } else {
-    for (var i = begin_line.indexOf(begin_stp)+1; i < begin_line.length; i--) {
+    for (var i = begin_line.indexOf(begin_stp)-1; i >= 0; i--) {
       for (var j = 0; j < desti_line.length; j++) {
         if (desti_line[j] === begin_line[i]) {
           stp.push(begin_line[i]);
@@ -246,6 +247,7 @@ console.log(interatelines('6'));
 function Journey(str_begin_line, begin_stp, str_desti_line, desti_stp) {
   //str_begin_line ----> begin_line &&
   //str_desti_line ----> desti_line_
+  this.stp_nochangeline = stp_nochangeline(interatelines(str_begin_line), begin_stp, desti_stp)
   this.stp_before_inter = stp_before_inter(interatelines(str_begin_line), begin_stp, interatelines(str_desti_line));
   this.doesinter = doesinter(str_begin_line, str_desti_line);
   this.stp_after_inter = stp_after_inter(interatelines(str_begin_line), desti_stp, interatelines(str_desti_line));
@@ -253,25 +255,22 @@ function Journey(str_begin_line, begin_stp, str_desti_line, desti_stp) {
 }
 
 var planTrip = function (str_begin_line, begin_stp, str_desti_line, desti_stp) {
-  debugger;
     var planedjourney = new Journey(str_begin_line, begin_stp, str_desti_line, desti_stp)
       if (planedjourney.doesinter) {
-        return  "You must travel through the following stops on the "+str_begin_line+" line: "+ planedjourney.stp_before_inter.join(', ')+".\n"+
+        return  "You must travel through the following stops on the "+str_begin_line+" line: "+ planedjourney.stp_before_inter.toString()+".\n"+
                 "Change at Union Square.\n"+
-                "Your journey continues through the following stops: "+ planedjourney.stp_after_inter.join(', ')+".\n"+
+                "Your journey continues through the following stops: "+ planedjourney.stp_after_inter.toString()+".\n"+
                 planedjourney.total()+" stops in total."
       } else {
-        return "You must travel through the following stops on the "+str_begin_line+" line: "+ planedjourney.stp_before_inter.join(', ')+".\n"+
+        return "You must travel through the following stops on the "+str_begin_line+" line: "+ planedjourney.stp_nochangeline.toString()+".\n"+
                 "not Change at Union Square.\n"+
-                "Your journey continues through the following stops: "+ planedjourney.stp_after_inter.join(', ')+".\n"+
-                planedjourney.total()+" stops in total."
+                planedjourney.stp_nochangeline.length+" stops in total."
               }
 }
 
 console.log("Test for planTrip");
-// console.log(planTrip('N', 'Times_Square_N', '6', '33rd_6'));
-// console.log(planTrip('L', '1st_L', 'N', 'Times_Square_N'));
-
+console.log(planTrip('N', 'Times_Square_N', '6', '33rd_6'));
+console.log(planTrip('L', '1st_L', 'N', 'Times_Square_N'));
 console.log(planTrip('N', 'Times_Square_N', 'N', '8th_N'));
 
 //- where the stops getting on and off are the same
