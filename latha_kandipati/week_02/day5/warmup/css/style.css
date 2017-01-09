@@ -1,0 +1,14 @@
+body{
+  max-width: 1000px;
+  margin: 3em auto;
+  font-family: cursive;
+  font-size: 18px;
+  word-spacing: 5px;
+  border: 1px solid black;
+}
+.showText{
+  position: absolute;
+}
+#hideText{
+  visibility: hidden;
+}
