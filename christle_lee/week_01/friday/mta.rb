@@ -1,4 +1,5 @@
 # global variable assigned with @. could put in function
+require 'rainbow'
 @subway = {
     "N" => ['Time Square', '34th', '28th', '23rd', 'Union Square', '8th'],
     "L" => ['8th', '6th', 'Union Square', '3rd', '1st'],
@@ -20,11 +21,13 @@ end
 
 def plan_trip(from_line, from_station, to_line, to_station)
   if from_line == to_line #single line trip
+    puts Rainbow("From #{from_station} to #{to_station}").green.underline
     print "You must travel through the following stops on the #{ from_line } line: "
     stops = trip(from_line, from_station, to_station)
     puts stops.join(", ")
     puts "#{ stops.length - 1} stops in total."
   else #different line
+    puts Rainbow("From #{from_station}(line #{ from_line }) to #{to_station} (line #{to_line})").magenta.underline
     print "You must travel through the following stops on the #{ from_line } line: "
     before_transfer = trip(from_line, from_station, "Union Square")
     puts before_transfer.join(", ")
