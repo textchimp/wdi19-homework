@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Eczar');
+
+body{
+  font-family: 'Amatic SC', cursive;
+  padding-top: 5em;
+}
+
+.container{
+  margin:auto;
+  width: 900px;
+}
+
+h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin-top:-20px;
+}
+
+/*Navigation*/
+nav{
+  text-align: center;
+  
+}
+
+nav span {
+  float:left;
+  margin-left:20px;
+}
+
+nav a{
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+
+}
+
+nav .fa{
+  color:black;
+}
+
+/* Main section */
+main p{
+  font-size: 18px;
+  font-family: 'Eczar', serif;
+}
+
+bold{
+  font-weight: bold;
+  font-size: 3em;
+}
+
+/*Page columns*/
+.flexbox{
+  display:flex;
+  margin:-20px;
+  margin-top:30px;
+
+  text-align: justify;
+  font-family: 'Eczar', serif;
+  font-size: 1.1em;
+}
+
+.column1, .column2{
+  flex: 1 0 0;
+  margin: 20px;
+}
+
+/*Footer*/
+footer {
+  background-color: #444;
+  height:100px;
+  width:100%;
+  margin-top: 100px;
+}
+
+/*Page: Index*/
+header img{
+  display:block;
+  margin: 0 auto;
+}
+
+.quote{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 5px;
+}
+
+/*Bio*/
+.sources{
+  text-align: left;
+}
+
+/* Page: Trivia*/
+.rollingstones{
+  width:400px;
+}
+
+/*Links*/
+a:link {
+  color:#444;
+}
+
+a:hover{
+  text-decoration: line-through;
+}
+
+a:visited
