@@ -12,6 +12,10 @@ var planTrip = function (srcLine, srcStation, dstLine, dstStation){
 // Possiblity 1: if on the same line
   if (srcLine === dstLine) {
     if (s.indexOf(dstStation) < s.indexOf(srcStation)) {  s = s.reverse();  }
+
+    for (var i = s.indexOf(srcStation) + 1; i <= s.indexOf(dstStation); i++) {
+      listOfStations_l1.push(s[i]);
+    }
     console.log("Your must travel through the following stops on the " + srcLine + " line: " +
     listOfStations_l1.join(', ')
     + ".\n" + (listOfStations_l1.length) + " stops in total.");
@@ -24,14 +28,14 @@ var planTrip = function (srcLine, srcStation, dstLine, dstStation){
       if (d.indexOf(s[i]) > 0 && s[i] !== 'Union Square') {
         listOfStations_l1.push(s[i] + " on the " + srcLine);
       } else {
-          listOfStations_l1.push(s[i]);
+        listOfStations_l1.push(s[i]);
       }
     }
     for (var i = d.indexOf('Union Square') + 1; i <= d.indexOf(dstStation); i++) {
       if (s.indexOf(d[i]) > 0 && d[i] !== 'Union Square') {
         listOfStations_l2.push(d[i] + " on the " + dstLine);
       } else {
-          listOfStations_l2.push(d[i]);
+        listOfStations_l2.push(d[i]);
       }
     }
     console.log("Your must travel through the following stops on the " + srcLine + " line: " +
