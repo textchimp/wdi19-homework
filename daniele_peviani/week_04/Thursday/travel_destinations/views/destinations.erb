@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Destinations you might consider for your next trip</h1>
+  <ul class="destinations-list">
+    <% @destinations.each do |destination| %>
+        <li>
+          <div class="destination-name"><%= destination['name']%></div>
+          <a href="/destinations/<%= destination['id']%>">
+            <div class="destination" style="background-image: url('<%= destination['image']%>')"></div>
+          </a>
+        </li>
+    <% end %>
+  </ul>
+</div>
