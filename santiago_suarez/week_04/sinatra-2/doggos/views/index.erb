@@ -1,0 +1,11 @@
+<h2>Some perros</h2>
+
+<ul>
+  <% @doggos.each do |doggo| %>
+    <li>
+      <a href="/doggos/<%= doggo['id'] %>">
+        <%= doggo['name'] %>
+      </a>
+    </li>
+  <% end %>
+</ul>

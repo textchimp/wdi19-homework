@@ -1,0 +1,17 @@
+<h2>Edit Dog</h2>
+
+<form action="/doggos/<%= @doggo['id'] %>" method="post">
+  <input type="text" name="name" placeholder="Dogger name" value="<%= @doggo['name'] %>">
+  <input type="text" name="race" placeholder="Dog race" value="<%= @doggo['race'] %>">
+  <label for='isGoodBoy'>Is he a good boy?
+    <% if @doggo['isGoodBoy'] %>
+      <input type="radio" name="isGoodBoy" value="TRUE" checked>Yes
+      <input type="radio" name="isGoodBoy" value="FALSE"> No
+    <% else %>
+      <input type="radio" name="isGoodBoy" value="TRUE">Yes
+      <input type="radio" name="isGoodBoy" value="FALSE" checked> No
+    <% end %>
+  </label>
+  <input type="url" name="image" placeholder="http://..." value="<%= @doggo['image'] %>">
+  <button>Update Pup</button>
+</form>
