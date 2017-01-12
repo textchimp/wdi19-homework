@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Online Movie Database</h1>
+  <form action="/search">
+    <input type="text" name="title" autocomplete="off" required placeholder="Enter the title of the movie">
+    <button>Search Movie</button>
+  </form>
+  <% if @error %>
+    <span class="error">Movie not found, try with a different title</span>
+  <% end %>
+</div>
