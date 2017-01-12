@@ -1,0 +1,10 @@
+<h2>Edit status</h2>
+<!-- method="get" is the default -->
+<!-- use same url but post something to it. -->
+
+<form action="/users/<%= @user['id'] %>" method="post">
+  <input id="status" type="text" name="status" placeholder="What's on your mind" value="<%= @user['status'] %>"><br><br>
+
+  <input id="postpic" type="url" name="image" placeholder="http://..." value="<%= @user['image'] %>"><br><br>
+  <button id="edit">Glitter</button>
+</form>
