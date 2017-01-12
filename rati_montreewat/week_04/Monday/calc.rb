@@ -1,8 +1,12 @@
 # show amenu
+# require 'pry'
+
 def show_menu
   puts "Calculator"
   puts "-" * 80
   puts "[q] - Quit [a] - add [s] - subtract [m] - multipy [d] - divide [e] - exponent [e] - exponent"
+
+  # binding.pry
 end
 
 def calculate(operator)
