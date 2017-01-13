@@ -1,0 +1,25 @@
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+input, button{
+  font-size: 16px;
+}
+ul li{
+  color: yellow;
+  list-style: none;
+}
+.slide-show{
+  background-color: pink;
+  max-width: 960px;
+  position: relative;
+  margin: auto;
+  border: 1px solid black;
+}
+.mySlides{
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
