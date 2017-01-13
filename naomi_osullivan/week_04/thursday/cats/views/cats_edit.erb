@@ -1,0 +1,7 @@
+<form action="/cats/<%=@cat['id']%>" method="post">
+  <input type="text" name="breed" placeholder="Breed" value="<%= @cat['breed'] %>">
+  <input type="text" name="coat" placeholder="Coat type" value="<%= @cat['coat'] %>">
+  <input type="text" name="country" placeholder="Country of Origin" value="<%= @cat['country'] %>">
+  <input type="url" name="image" placeholder="http://..." value="<%= @cat['image'] %>">
+  <button>Edit Cat</button>
+</form>
