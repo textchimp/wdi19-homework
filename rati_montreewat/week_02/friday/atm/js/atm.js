@@ -1,33 +1,3 @@
-// $(document).ready(function() {
-//
-//    $('.account').on('click', "[value = Deposit]", function() {
-//     debugger;
-//     var amount = $(this).find("input[type=text]").val();
-//     var balance = $(this).find('.balance').text();
-//     var newbalance = parseInt(amount)+parseInt(balance.slice(1,balance.length));
-//     $(this).find('.balance').text(newbalance);
-//   });
-//
-// });
-//
-// and
-//
-// $(document).ready(function() {
-//
-//   $('input[value=Deposit]').on('click', function() {
-//    var account = $(this).closest(".account");
-//    var amount = account.find("input[type=text]").val();
-//    var balance = account.find('.balance').text();
-//    var newbalance = parseInt(amount)+parseInt(balance.slice(1,balance.length));
-//    account.find('.balance').text("$"+newbalance);
-//  });
-//
-// });
-
-
-// ??????? I can't see the differnce between the two codes above.
-//          However, the first one doesn't work. In particular, when debugging the first one,
-//         At line 5, the amount variavle is undefined, and I dont understand why?
 
 $(document).ready(function() {
 
