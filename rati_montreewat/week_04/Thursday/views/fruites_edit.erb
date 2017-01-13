@@ -1,0 +1,8 @@
+<h2>Edit Fruite</h2>
+
+<form action="/fruites/<%= @fruite['id'] %>" method="post">
+  <input type="text" name="commonname" placeholder="fruite common name" value="<%= @fruite['commonname'] %>">
+  <input type="text" name="scientificname" placeholder="fruite scientific name" value="<%= @fruite['scientificname'] %>">
+  <input type="url" name="image" placeholder="http://..." value="<%= @fruite['image'] %>">
+  <button>Update Fruite</button>
+</form>

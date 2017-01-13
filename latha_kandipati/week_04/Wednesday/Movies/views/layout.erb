@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <script src="/js/slideshow.js"></script> -->
+  <title>Movie hub</title>
+</head>
+<body>
+<div class="container">
+  <h1>Movie Hub</h1>
+  <h2>Search for the movies here</h2>
+  <form action="/movies">
+    <input type="text" placeholder="Movie name" name="movie">
+    <button>Search</button>
+  </form>
+  <%= yield %>
+</div>
+</body>
+</html>
