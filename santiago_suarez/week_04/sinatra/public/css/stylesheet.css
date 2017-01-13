@@ -1,0 +1,15 @@
+.brand {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 2px solid;
+}
+
+.form {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 200px;
+}
+
+.movie {
+  text-align: center;
+}

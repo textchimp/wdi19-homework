@@ -1,0 +1,13 @@
+body {
+  background-color: darkgoldenrod;
+}
+div {
+  background-color: honeydew;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+
+}
+h1 {
+  text-align: center;
+}
