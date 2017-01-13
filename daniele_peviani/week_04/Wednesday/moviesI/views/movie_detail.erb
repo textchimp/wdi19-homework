@@ -1,0 +1,15 @@
+<div class="hero-image" style="background-image: url('<%= @movie_detail['Poster'] %>');"></div><div class="details">
+  <div class="details-wrapper">
+    <h2><%= @movie_detail['Title'] %></h2>
+    <h4>Year</h4>
+    <p><%= @movie_detail['Year'] %></p>
+    <h4>Director</h4>
+    <p><%= @movie_detail['Director'] %></p>
+    <h4>Actors</h4>
+    <p><%= @movie_detail['Actors'] %></p>
+    <h4>Plot</h4>
+    <p><%= @movie_detail['Plot'] %></p>
+    <h4>IMDB rating  <span><%= @movie_detail['imdbRating'] %></span> IMDB votes <span><%= @movie_detail['imdbVotes'] %></span></h4>
+    <a href="http://localhost:4567/"><button>Home</button></a>
+  </div>
+</div>
