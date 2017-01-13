@@ -1,0 +1,22 @@
+<div id=personal>
+<h2><%= @user['username'] %></h2>
+<a id="unpal" href="/users/<%= @user['id'] %>/delete">UNPAL</a><br><br><br>
+
+<form action="/users/<%= @user['id'] %>" method="post">
+  <textarea id="status" type="text" name="status" rows="5" cols="44" placeholder="What's on your mind..?" value="<%= @user['status'] %>"></textarea><br><br>
+
+  <input id="postpic" type="url" name="image" placeholder="post a selfie" value="<%= @user['image'] %>"><br><br>
+  <button id="edit">Glitter</button>
+</form>
+
+
+<% unless @user['status'].nil? || @user['image'].nil? %>
+<p id="status"><%= @user['status'] %></p>
+<img class="feature" src="<%= @user['image'] %>" alt="">
+
+<% end %>
+
+<div class="controls">
+  <a href="/users/<%= @user['id'] %>/edit">Edit</a>
+</div>
+</div>

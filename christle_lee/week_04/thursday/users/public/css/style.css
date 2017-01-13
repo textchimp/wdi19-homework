@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+* {
+  box-sizing: border-box;
+
+}
+a#homebutt {
+  margin: 0;
+  font-size: 50px;
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+h2 {
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'VT323', monospace;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+/*a:hover {
+  text-decoration: underline;
+}*/
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  border: 1px solid pink;
+  padding: 3em;
+}
+
+nav {
+  text-align: center;
+}
+
+input.signup {
+  width: 280px;
+  height: 40px;
+  text-align: left;
+  font-size: 20px;
+  padding: 0.5em;
+  border: 1px solid pink;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+}
+
+input#search {
+  width: 200px;
+  height: 25px;
+  text-align: left;
+  font-size: 20px;
+  padding: 0.5em;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+}
+div#search {
+  margin: 20px;
+}
+input#status {
+  width: 300px;
+  height: 100px;
+  text-align: left;
+  font-size: 20px;
+  padding: 0.5em;
+  border: 1px solid pink;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+}
+textarea {
+  font-size: 16px;
+  padding: 0.5em;
+  border: 1px solid pink;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+}
+input#postpic {
+  width: 300px;
+  height: 20px;
+}
+
+button#signup {
+  width: 280px;
+  height: 40px;
+  background-color: rgb(74, 195, 117);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+button#edit {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(74, 195, 117);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+div#signup {
+  margin: 100px;
+}
+div#posts {
+  border: 1px solid pink;
+  text-align: left;
+  padding: 20px;
+  font-size: 30px;
+}
+p#status{
+  font-size: 25px;
+  border: 1px solid pink;
+  text-align: left;
+  padding: 20px;
+}
+div#personal{
+  text-align: left;
+}
+
+a#unpal {
+  font-size: 20px;
+  text-decoration: none;
+  color: red;
+}
+a#unpal:hover{
+  text-decoration: underline;
+  color: green;
+}
