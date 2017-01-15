@@ -1,0 +1,13 @@
+<p>
+  <h2 class="book"><span>Author Name: </span><%= @author['name'] %></h2>
+  <% if !@author['description'].empty? %>
+    <h3><span>Description: </span><%= @author['description'] %></h3>
+  <%end%>
+  <% if !@author['image'].empty? %>
+    <img src="<%=@author['image']%>" alt="">
+  <%end%>
+  <nav>
+    <a href="/authors/<%=@author['id']%>/edit">Edit</a>
+    <a href="/authors/<%=@author['id']%>/delete">Delete</a>
+  </nav>
+</p>
