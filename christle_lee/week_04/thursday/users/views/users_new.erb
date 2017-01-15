@@ -1,0 +1,11 @@
+<div id="signup">
+<h2>Join gB today!</h2>
+<!-- method="get" is the default -->
+<!-- use same url but post something to it. -->
+<form action="/users/<%= params[:id] %>" method="post">
+  <input class="signup" type="text" name="username" placeholder="username"><br><br>
+  <input class="signup" type="password" name="password" placeholder="password" attribute="hidden"><br><br>
+  <!-- <input type="url" name="image" placeholder="http://..."> -->
+  <button id="signup">Sign up</button>
+</form>
+</div>
