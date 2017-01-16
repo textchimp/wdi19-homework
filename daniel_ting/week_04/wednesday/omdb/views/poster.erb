@@ -1,0 +1,11 @@
+<form action="/search">
+ <input type="text" placeholder="name" name="movie">
+ <button>Enter</button>
+</form>
+
+<% if @posters %>
+  <br>
+  <% @posters.each do |p| %>
+    <img src="<%= p["Poster"] if p["Poster"] != 'N/A' %>" id="<%= p["Title"]%>">
+  <% end %>
+<% end %>

@@ -1,0 +1,10 @@
+<h2>Edit Stock</h2>
+
+<form action="/stock/<%= @index['symbol'] %>" method="post">
+  <input type="text" name="symbol" placeholder="sticker" value="<%= @index['symbol'] %>">
+  <input type="text" name="name" placeholder="Company's name" value="<%= @index['name'] %>">
+  <input type="text" name="last_trade" placeholder="Price" value="<%= @index['last_trade'] %>">
+  <input type="number" name="volume" placeholder="Volume" value="<%= @index['volume'] %>">
+  <input type="number" name="change" placeholder="Change" value="<%= @index['change'] %>">
+  <button>Update Stock</button>
+</form>
