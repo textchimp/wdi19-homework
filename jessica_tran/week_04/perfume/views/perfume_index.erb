@@ -1,0 +1,14 @@
+<h1>Fragrance List</h1>
+
+<div class="form_wrapper">
+
+  <% @perfume.each do |perfume| %>
+  <li>
+    <img class="thumbnail_img" src="<%=perfume['image']%>" alt="">
+    <p><a href="/perfume/<%=perfume['id']%>">
+      <%= perfume['name'] %></p>
+    </a>
+  </li>
+  <% end %>
+
+</div>
