@@ -1,0 +1,19 @@
+
+<div id="search">
+<form action="/users >" method="get">
+  <input id="search" type="text" name="username" placeholder="search username">
+  <button>Search</button>
+</form>
+</div><br>
+
+
+  <% @users.each do |user| %>
+<div id="posts">
+   <p>
+     <a href="/users/<%= user['id'] %>">
+       <%= user['username'] %>
+     </a>
+   </p>
+   <p>  <%= user['status'] %> </p>
+ </div><br><br>
+  <% end %>
