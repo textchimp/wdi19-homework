@@ -1,0 +1,17 @@
+<div class="show_wrapper">
+  <% unless @perfume1['image'].nil? %>
+    <img class="perfume_img" src="<%= @perfume1['image'] %>" alt="">
+  <% end %>
+
+  <div class="perfume_info">
+    <h2><%= @perfume1['brand'] %></h2>
+    <h3><%= @perfume1['name'] %></h3>
+    <h4>Cost: <%= @perfume1['cost'] %></h4>
+  </div>
+
+  <div class="controls">
+    <a href="/perfume/<%=@perfume1['id']%>/edit">Edit</a>
+    <a href="/perfume/<%=@perfume1['id']%>/delete">Delete</a>
+  </div>
+
+</div>

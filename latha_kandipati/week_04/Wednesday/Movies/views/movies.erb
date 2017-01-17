@@ -1,0 +1,32 @@
+<p>
+  <h3>Movie list</h3>
+
+  <ul>
+    <% if @movie_list["Search"].nil? %>
+
+      <h2>There are no movies matching with that word.</h2>
+
+    <% elsif @movie_list["Search"].count == 1 %>
+
+      <% mov = @movie_list["Search"][0] %>
+      <h3>Title of the movie: <%= "#{mov["Title"]}" %></h3>
+      <h3>Release Year: <%= "#{mov["Year"]}" %> </h3>
+      <h3>Movie Plot: <%= "#{mov["Plot"]}" %></h3>
+      <img src=<%="#{mov["Poster"]}"%> alt="Movie poster">
+
+    <% else %>
+        <div class="slideshow">
+        <% @movie_list["Search"].each do |mov| %>
+          <li>
+            <a href="/movies/<%=mov["Title"]%>">
+              <img src="<%=mov["Poster"]%>" alt="Movie poster" class="mySlides">
+            </a>
+          </li>
+          <br>
+        <% end %>
+        </div>
+
+    <% end %>
+  </ul>
+
+</p>

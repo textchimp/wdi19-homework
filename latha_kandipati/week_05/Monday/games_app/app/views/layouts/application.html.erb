@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GamesApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+  <nav>
+    <div class="nav-box">
+    <a href="/">Home</a>
+    <a href="/secret_number">Secret Number</a>
+    <a href="/magic8ball">Magic 8 Ball</a>
+    <a href="/rock_paper_scissors">Rock-Paper-Scissors</a>
+    </div>
+  </nav>
+
+  <%= yield %>
+  </div>
+</body>
+</html>

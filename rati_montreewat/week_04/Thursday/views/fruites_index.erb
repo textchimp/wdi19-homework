@@ -1,0 +1,11 @@
+<h2>All fruites</h2>
+
+<ul>
+  <% @fruites.each do |fruite| %>
+    <li>
+      <a href="/fruites/<%= fruite['id'] %>">
+        <%= fruite['commonname'] %>
+      </a>
+    </li>
+  <% end %>
+</ul>

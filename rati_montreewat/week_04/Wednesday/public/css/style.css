@@ -1,0 +1,14 @@
+
+
+body {
+  /*display: block;*/
+  background-size: 100% 100%;
+  padding: 0px;
+  text-align: center;
+  color: background-color: rgba(149,149,149,0.8);
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+}

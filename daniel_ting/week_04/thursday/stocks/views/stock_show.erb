@@ -1,0 +1,8 @@
+<h3><%= @stock['name'] %> (<%= @stock['symbol'] %>)</h3>
+<h3>$<%= @stock['last_trade'] %> (<%= @stock['change'] %>%)</h3>
+<h3>Trading Volume: <%= @stock['volume'] %></h3>
+
+<div class="controls">
+  <a href="/stock/<%=@stock['symbol']%>/delete">Delete</a>
+  <a href="/stock/<%=@stock['symbol']%>/edit">Edit</a>
+</div>

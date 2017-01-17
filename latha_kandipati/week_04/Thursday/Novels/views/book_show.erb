@@ -1,0 +1,10 @@
+<p>
+  <h2 class="book"><span>Book Name: </span><%= @book['name'] %></h2>
+  <h2 class="book"><span>Author: </span><%= @book['author'] %><h2>
+  <h3><span>Description: </span><%= @book['description'] %></h3>
+  <img class="slides" src="<%=@book['image']%>" alt="">
+  <nav>
+    <a href="/books/<%=@book['id']%>/edit">Edit</a>
+    <a href="/books/<%=@book['id']%>/delete">Delete</a>
+  </nav>
+</p>

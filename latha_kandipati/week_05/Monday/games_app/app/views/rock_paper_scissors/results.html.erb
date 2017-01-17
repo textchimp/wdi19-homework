@@ -1,0 +1,21 @@
+<p>
+  <div class="rock">
+  <div class="game">
+    <h2>You have chosen: </h2>
+    <img class="rock-sci-paper" src="<%=@user_img%>" alt="User img">
+  </div>
+  <div class="game">
+    <h2>I have chosen: </h2>
+    <img class="rock-sci-paper" src="<%=@comp_img%>" alt="Computer img">
+  </div>
+  <div class="clear-both"></div>
+  <h1>And ...</h1>
+  <% if @game == 'win' %>
+    <h1>You win!!!</h1>
+  <% elsif @game == 'lose' %>
+    <h1>I win !!!!</h1>
+  <% else %>
+    <h1>Its a Draw.</h1>
+  <%end%>
+  </div>
+</p>

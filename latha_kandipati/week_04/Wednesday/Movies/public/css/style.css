@@ -1,0 +1,31 @@
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+input, button{
+  font-size: 16px;
+}
+ul li{
+  color: yellow;
+  list-style: none;
+}
+.slideshow{
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  vertical-align: top;
+}
+.mySlides{
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  /*float: left;*/
+  transform: rotateY(70deg);
+}
+.mySlides:hover{
+  transform: none;
+  height: 200px;
+  width: 200px;
+}

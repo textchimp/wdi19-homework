@@ -1,0 +1,14 @@
+<h1>Edit Fragrance</h1>
+
+<form class="form_wrapper" action="/perfume/<%= @perfume1['id'] %>" method="post" required="true">
+  Brand<br>
+  <input type="text" name="brand" placeholder="Fragrance Brand" value="<%=@perfume1['brand']%>" required="true"><br>
+  Name<br>
+  <input type="text" name="name" placeholder="Fragrance Name" value="<%=@perfume1['name']%>" required="true"><br>
+  Cost<br>
+  <input type="text" name="cost" placeholder="Fragrance Cost" value="<%=@perfume1['cost']%>" required="true"><br>
+  Image URL<br>
+  <input type="url" name="image" placeholder="Image URL" value="<%=@perfume1['image']%>" required="true"><br>
+
+  <button>Edit Fragrance</button>
+</form>
