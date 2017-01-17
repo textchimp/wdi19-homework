@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bungee+Shade|Dancing+Script|Vampiro+One');
+/*font-family: 'Dancing Script', cursive;
+font-family: 'Vampiro One', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Bungee Shade', cursive;*/
+body{
+  background-color: #D6BEE5;
+  color: #571E7B;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.rock-sci-paper{
+  height: 200px;
+  width: 200px;
+}
+.game{
+  float: left;
+  height: 300px;
+  width: 300px;
+}
+.clear-both{
+  clear: both;
+}
+a{
+  text-decoration: none;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  margin: 1em;
+  padding: 0.2em;
+}
+a:hover{
+  background-color: #571E7B;
+  color: #D6BEE5;
+}
+.nav-box{
+  border: 1px solid #571E7B;
+  margin-top: 50px;
+  padding: 2em;
+}
+h1{
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+}
+h2{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+input{
+font-family: 'Dancing Script', cursive;
+width: 40%;
+font-size: 2em;
+}
+select{
+  width: 20%;
+  height: 20%;
+  font-size: 1em;
+}
+button{
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  font-weight: bold;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+}
+img{
+  width: 400px;
+  height: 300px;
+}
+.wrapper{
+  overflow: hidden;
+  width: 400px;
+}
+.wrapper figure{
+  position: relative;
+  width: 300%;
+  margin: 0;
+  animation: 10s sliding infinite;
+}
+.home-images{
+  float: left;
+}
+@keyframes sliding {
+  0% {
+    left: 0%;
+  }
+  33% {
+    left: 0%;
+  }
+  38% {
+    left: -100%;
+  }
+  71% {
+    left: -100%
+  }
+  76% {
+    left: -200%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+.slider{
+  text-align: center;
+  padding-left: 250px;
+}
+.rock{
+  max-width: 600px;
+  margin: 0 auto;
+}

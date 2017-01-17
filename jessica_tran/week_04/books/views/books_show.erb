@@ -1,0 +1,19 @@
+
+<h2><%= @book['title'] %></h2>
+
+
+
+<img class = "show_image" src="<%= @book['image'] %>" alt="">
+
+<div class="wrapper">
+  <p>Author: <a href="/authors/<%= @book['author_id']%>"><%= "#{@author['first_name']}  #{@author['surname']}"%></a></p>
+  <p>Publisher: <%= @book['publisher'] %></p>
+  <p>Publication Date: <%= @book['yearPublished'] %></p>
+  <p>Synopsis: <%= @book['blurb'] %></p>
+
+</div>
+
+<div class="controls">
+  <a href="/books/<%= @book['id'] %>/edit">Edit</a>
+  <a href="/books/<%= @book['id'] %>/delete">Delete</a>
+</div>

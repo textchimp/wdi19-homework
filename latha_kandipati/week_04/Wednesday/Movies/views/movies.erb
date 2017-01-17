@@ -15,7 +15,7 @@
       <img src=<%="#{mov["Poster"]}"%> alt="Movie poster">
 
     <% else %>
-        <div class="slide-show">
+        <div class="slideshow">
         <% @movie_list["Search"].each do |mov| %>
           <li>
             <a href="/movies/<%=mov["Title"]%>">

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fairground</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav>
+    <a class="nav" href="/">Meeting Tree</a>
+    <a class="nav" href="/magic">Magic 8 Ball</a>
+    <a class="nav" href="/secret">Secret Number</a>
+    <a class="nav" href="/scissors">S-P-R</a>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

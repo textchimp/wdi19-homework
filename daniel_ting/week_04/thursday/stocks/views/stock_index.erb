@@ -1,0 +1,7 @@
+<h2>All Stocks</h2>
+
+<ul>
+  <% @stock.each do |i| %>
+    <li><a href="stock/<%= i['symbol'] %>"><%= i['name'] %></a></li>
+  <% end %>
+</ul>
