@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC');
+
+body {
+/*background: linear-gradient(to bottom, rgba(244,7,7,1) 0%,rgba(245,249,240,1) 100%);*/
+/*background: linear-gradient(to bottom, rgba(244,7,7,1) 20%,rgba(245,249,240,1) 70%);*/
+/*background: linear-gradient(to bottom, rgba(244,7,7,1) 49%,rgba(244,7,7,1) 49%,rgba(245,249,240,1) 50%);*/
+/*background: linear-gradient(to bottom, rgba(245,249,240,1) 0%,rgba(245,249,240,1) 0%,rgba(245,249,240,1) 0%,rgba(154,212,234,1) 100%);
+background-image: url(/assets/silhouette.jpg) no-repeat center center fixed;*/
+font-family: 'Holtwood One SC', serif;
+
+}
+
+img.tree {
+  width: 100%;
+}
+nav {
+  display: block;
+  text-align: center;
+}
+
+a.nav {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+}
+
+div.fortune {
+
+}
+img.fortune {
+  width: 100%;
+  position: relative;
+
+}
+
+div.inside {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}

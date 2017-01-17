@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/games/magichammer">Magic Hammer</a>
+      <a href="/games/secretnumber">Secret Number</a>
+      <a href="/games/rps">Rock Scissors Paper</a>
+    </nav>
+    <%= yield %>
+  </div>
+</body>
+</html>
