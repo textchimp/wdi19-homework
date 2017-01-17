@@ -1,0 +1,21 @@
+<h1><%= @name %></h1>
+
+<img class = "show_image" src=" <%= @author['image']%>" alt="">
+
+<div class="wrapper">
+  <h3>Information: </h3>
+  <p><%= @author['info']%></p>
+  <h3>Books: </h3>
+  <ul>
+    <% @author.books.order(:title).each do |book| %>
+      <li>
+        <a href="/books/<%= book['id'] %>"><%= book['title'] %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class= "controls">
+  <a href="/authors/<%=@author['id']%>/edit">Edit</a>
+  <a href="/authors/<%=@author['id']%>/delete">Delete</a>
+</div>
