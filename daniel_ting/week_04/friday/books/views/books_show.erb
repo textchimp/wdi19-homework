@@ -1,0 +1,10 @@
+<h2><%= @book['name'] %></h2>
+
+<% unless @book['image'].nil? %>
+  <img src="<%= @book['image'] %>" alt="">
+<% end %>
+
+<div class="controls">
+  <a href="/books/<%=@book['id']%>/delete">Delete</a>
+  <a href="/books/<%=@book['id']%>/edit">Edit</a>
+</div>
