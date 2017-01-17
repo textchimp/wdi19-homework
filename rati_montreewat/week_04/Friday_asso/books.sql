@@ -1,0 +1,6 @@
+CREATE TABLE books (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  year TEXT,
+  image TEXT
+);

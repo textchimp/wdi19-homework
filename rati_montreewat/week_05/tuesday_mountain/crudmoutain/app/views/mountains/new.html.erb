@@ -1,0 +1,28 @@
+<form action="<%= mountains_path %>" method="post">
+  <label>
+    name:
+    <input type="text" name="mountain[name]" required autofocus>
+  </label>
+
+  <label>
+    Country:
+    <input type="text" name="mountain[country]">
+  </label>
+
+  <label>
+    height:
+    <input type="number" name="mountain[height]">
+  </label>
+
+  <label>
+    image:
+    <input type="url" name="mountain[image]">
+  </label>
+
+  <label>
+    facts:
+    <input type="text" name="mountain[facts]">
+  </label>
+
+  <button>Create mountain</button>
+</form>
