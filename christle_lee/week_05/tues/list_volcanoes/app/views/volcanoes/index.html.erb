@@ -1,0 +1,6 @@
+<h1>Active Volcanoes</h1>
+<ul>
+  <% @volcanoes.each do |volcano| %>
+  <li><%= link_to volcano.name, volcano_path(volcano.id) %></li>
+  <%end%>
+</ul>
