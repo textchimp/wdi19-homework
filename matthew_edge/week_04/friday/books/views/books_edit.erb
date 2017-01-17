@@ -1,0 +1,7 @@
+<h2>Edit Book</h2>
+
+<form action="/books/<%= @book[:id] %>" method="post">
+  <input type="text" name="name" placeholder="Book name" value="<%= @book['name']%>">
+  <input type="number" name="pages" placeholder="Book pages" value="<%= @book['pages']%>">>
+  <button>Edit Book</button>
+</form>

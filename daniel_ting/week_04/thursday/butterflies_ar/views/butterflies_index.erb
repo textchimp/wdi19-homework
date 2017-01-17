@@ -1,0 +1,7 @@
+<h2>All <%= params[:family]%> Butterflies</h2>
+
+<ul>
+  <% @butterflies.each do |butterfly| %>
+    <li><a href="/butterflies/<%= butterfly['id'] %>"><%= butterfly['name'] %><img class="thumb" src="<%= butterfly[:image] %>"></a></li>
+  <% end %>
+</ul>

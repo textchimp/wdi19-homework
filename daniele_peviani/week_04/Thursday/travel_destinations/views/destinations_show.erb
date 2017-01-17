@@ -1,0 +1,19 @@
+<div class="hero-image" style="background-image: url('<%= @destinations['image']%>')"><div class="hero-name"><%= @destinations['name']%></div>
+</div>
+<div class="container">
+  <%= @destinations['map']%>
+  <div class="destination-info">
+    <h3>Country</h3>
+    <p><%= @destinations['country']%></p>
+    <h3>Population</h3>
+    <p><%= @destinations['population'].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
+    <h3>Language</h3>
+    <p><%= @destinations['language']%></p>
+    <h3>About</h3>
+    <p><%= @destinations['desc']%></p>
+  </div>
+  <div class="controls">
+    <a href="/destinations/<%= @destinations['id']%>/edit"><button>Update</button></a>
+    <a href="/destinations/<%= @destinations['id']%>/delete"><button>Delete</button></a>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<h1>Throw</h1>
+
+<div class="throw">
+<p>You chose <%=@throw%></p>
+<p>Trump chose <%=@trump%></p>
+
+<% if @throw == @computer %>
+<img src="/assets/draw.jpg" alt="">
+<p><%= @draw %></p>
+
+<% elsif @throw == "rock" && @trump == "scissors"%>
+<img src="/assets/trump_scissors.png" alt="">
+<p><%= @win %></p>
+
+<% elsif @throw == "rock" && @trump == "paper"%>
+<img src="/assets/trump_paper1.png" alt="">
+<p><%= @lose %></p>
+
+<% elsif @throw == "scissors" && @trump == "paper"%>
+<img src="/assets/trump_paper1.png" alt="">
+<p><%= @win %></p>
+
+<% elsif @throw == "scissors" && @trump == "rock"%>
+<img src="/assets/trump_rock.png" alt="">
+<p><%= @lose %></p>
+
+<% elsif @throw == "paper" && @trump == "scissors"%>
+<img src="/assets/trump_scissors.png" alt="">
+<p><%= @lose %></p>
+
+<% elsif @throw == "paper" && @trump == "rock"%>
+<img src="/assets/trump_rock.png" alt="">
+<p><%= @win %></p>
+
+<% else %>
+<img src="/assets/draw.jpg" alt="">
+<p><%= @draw %></p>
+
+<%end%>
+
+</div>

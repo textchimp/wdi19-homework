@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Gloria+Hallelujah|Indie+Flower|Kumar+One|Lemonada|Lobster|Orbitron|Pacifico');
+/*font-family: 'Pacifico', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Kumar One', cursive;*/
+
+body{
+  background-color: lightgrey;
+  font-family: 'Cinzel', serif;
+}
+.container{
+  background-color: black;
+  color: rgba(255,255,255,0.9);
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav a{
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+nav a:hover{
+  background-color: black;
+  color: lightgrey;
+  cursor: pointer;
+}
+nav{
+  background-color: lightgrey;
+  margin: 10px auto;
+  max-width: 100%;
+}
+header{
+  margin: 0 auto;
+  margin-top: -1.5em;
+}
+header h1{
+  padding: 1em;
+}
+
+.slideshow{
+  max-width: 100%;
+  max-height: 100%
+  perspective: 1000px;
+}
+.slides{
+  width: 130px;
+  height: 150px;
+  transform: rotateY(70deg);
+}
+
+.slides:hover{
+  transform: none;
+}
+
+ul{
+  list-style: none;
+}
+ul li {
+  margin-bottom: 1em;
+}
+ul li a{
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Orbitron', sans-serif;
+}
+.list:hover{
+  font-size: 1.8em;
+  cursor: pointer;
+}
+h2{
+  text-align: center;
+}
+.book{
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+}
+h3{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+span{
+  font-family: 'Cinzel', serif;
+}
+input{
+  background-color: rgba(255,255,255,0.9);
+  width: 80%;
+  font-size: 14px;
+  margin: 0.5em;
+  appearance: none;
+  border-radius: none;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+input:focus{
+  outline: none;
+}
+button{
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  margin-top: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.1s;
+  transition: background-color 0.3s ease-in 0.2s;
+}
+button:hover{
+  background-color: black;
+  color: lightgrey;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+}
+form{
+  text-align: center;
+}

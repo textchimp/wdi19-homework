@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Fiction Library</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Fiction Library</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/books">Browse-Books</a>
+        <a href="/book/new">Add-Book</a>
+        <a href="/authors">Browse-By-Author</a>
+        <a href="/author/new">Add-Author</a>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>
+      &copy; Copyright Latha 2017
+    </footer>
+  </div>
+</body>
+</html>

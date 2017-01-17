@@ -1,0 +1,11 @@
+<h2><%= @car['make'] %></h2>
+<h3>Family: <%= @car['model'] %></h3>
+<h3>Year: <%= @car['year'] %></h3>
+
+
+<div class="controls">
+<a href="/cars/<%= @car['id']%>/delete">Delete</a>
+<a href="/cars/<%= @car['id']%>/edit">Edit</a>
+<a href="">Edit</a>
+
+</div>

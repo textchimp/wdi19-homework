@@ -1,0 +1,14 @@
+<h1>Edit Author</h1>
+<form action="/authors/<%=@author['id']%>" method="post">
+  First Name
+  <input type="text" name="first_name" placeholder="First Name" value="<%=@author['first_name']%>">
+  Surname
+  <input type="text" name="surname" placeholder="Surname" value="<%=@author['surname']%>">
+  Information
+  <input type="text" name="info" placeholder="Information" value="<%=@author['info']%>">
+  <!-- #image -->
+  Image URL
+  <input type="text" name="image" placeholder="Image URL" value="<%=@author['image']%>">
+
+  <button>Edit Author</button>
+</form>
