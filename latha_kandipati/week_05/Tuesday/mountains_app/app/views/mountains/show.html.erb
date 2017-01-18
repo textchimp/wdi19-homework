@@ -1,0 +1,9 @@
+<h1> <%= @mountain.name %> </h1>
+<% unless @mountain.image.nil? %>
+   <%= image_tag @mountain.image %>
+<% end %>
+
+<div class="controls">
+  <%= link_to "Edit", mountain_edit_path(@mountain.id) %>
+  <%= button_to "Delete", mountain_delete_path(@mountain.id), :method => "post"%>
+</div>
