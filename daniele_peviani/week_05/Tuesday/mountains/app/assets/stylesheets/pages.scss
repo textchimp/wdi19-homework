@@ -1,0 +1,29 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+////// Home ////////
+
+.home-hero-image {
+  height: 100%;
+  background-image: url('/assets/home-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+blockquote {
+  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 40px;
+  font-size: 2.5em;
+  line-height: 1.5em;
+}
+
+em {
+  font-size: .5em;
+  text-align: right;
+  width: 100%;
+}
