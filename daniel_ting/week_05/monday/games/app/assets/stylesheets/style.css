@@ -1,0 +1,18 @@
+body {
+  margin: 0 auto;
+  width: 720px;
+  text-align: center;
+}
+
+nav {
+  margin: 15px;
+}
+
+nav a {
+  margin: 15px;
+}
+
+img {
+  max-width: 65%;
+  max-height: 30%;
+}

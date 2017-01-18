@@ -1,0 +1,10 @@
+<ul>
+  <% @numbers.each do |n| %>
+    <li style="background-color: <%= cycle('red', 'white', 'blue') %>"><%= n %></li>
+  <% end %>
+</ul>
+
+<p><%= pluralize @error_count1, "error" %> occured.</p>
+<p><%= pluralize @error_count2, "error" %> occured.</p>
+
+<p><%= truncate @story, :length => 20 %></p>
