@@ -1,0 +1,9 @@
+<h1>Movies</h1>
+
+
+<% @movies.each do |movie| %>
+  <div class="index_box">
+    <%= image_tag movie.image, :class=>'thumb' %>
+    <li><%= link_to movie.title, movie %></li>
+  </div>
+<% end %>

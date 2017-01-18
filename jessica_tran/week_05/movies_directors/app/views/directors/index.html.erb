@@ -1,0 +1,8 @@
+<h1>Directors</h1>
+
+<% @directors.each do |director| %>
+  <div class="index_box">
+    <%= image_tag director.image, :class => 'thumb' %>
+    <li><%= link_to director.name, director %></li>
+  </div>
+<% end %>
