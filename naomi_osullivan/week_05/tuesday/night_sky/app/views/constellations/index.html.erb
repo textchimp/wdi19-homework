@@ -1,0 +1,13 @@
+<h1>Constellations</h1>
+
+<ul>
+  <% @constellations.each do |constellation|%>
+    <li><%= link_to constellation.name, constellation_path(constellation.id)%></li>
+  <%end%>
+
+
+</ul>
+<!-- constellation.name -->
+
+<!-- link_to constellation.name, constellation_path(constellation.id) -->
+<!-- link_to planet.name, planet_path(planet.id) -->

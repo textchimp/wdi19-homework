@@ -1,0 +1,103 @@
+body {
+  font-family: sans-serif;
+
+}
+
+
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.main_list a{
+  display: inline-block;
+
+  width: 20em;
+  height: 8em;
+
+  text-align: center;
+  padding-top: 7em;
+}
+
+.main_box{
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 15em;
+  border: 1px solid #333;
+
+}
+
+.main_list a:hover{
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  text-decoration: none;
+
+}
+.container {
+  display: block;
+  width: 50em;
+  margin: 0 auto;
+}
+nav {
+  background-color: black;
+  text-align: right;
+  padding: 1.4em;
+  font-size: 0.8em;
+}
+
+nav a {
+  color: white;
+  margin: 1em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.ocean_form{
+  text-transform: lowercase;
+  font-size: 0.9em;
+  display: block;
+  width: 30em;
+  margin: 0 auto;
+}
+
+.ocean_form label {
+  padding-left: 0.5em;
+}
+.ocean_form input{
+  display: block;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  width: 30em;
+}
+
+button, input[type="submit" i]{
+  display: block;
+  width: 100px;
+  height: 3em;
+  background-color: white;
+  border: 1px solid black;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.edit_button{
+  width: 100px;
+  height: 1.6em;
+  background-color: white;
+  border: 1px solid black;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.7em;
+  padding: 0.6em 0;
+}
+
+form.button_to, .edit_button{
+  display: inline-block;
+
+}
+
+.ocean_image {
+  width: 100%
+}

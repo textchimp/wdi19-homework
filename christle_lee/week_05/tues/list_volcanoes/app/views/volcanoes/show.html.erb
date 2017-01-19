@@ -1,0 +1,17 @@
+<h1><%= @volcano.name %></h1>
+
+<% unless @volcano.image.nil? %>
+
+<%= image_tag @volcano.image %>
+
+<%end%>
+
+<p>Last eruption: <%= @volcano.last_eruption %></p>
+<p>Country: <%= @volcano.country %></p>
+
+
+<div class="controls">
+  <%= link_to "Edit Volcano", volcano_edit_path(@volcano.id) %>
+  <%= button_to "Delete Volcano", volcano_delete_path(@volcano.id), :method => 'post' %>
+
+</div>

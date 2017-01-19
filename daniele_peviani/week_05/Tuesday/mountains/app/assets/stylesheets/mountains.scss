@@ -1,0 +1,196 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Martel:200');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  font-family: 'Martel', serif;
+  font-size: 1em;
+}
+
+header {
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4b6cb7 , #182848); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4b6cb7 , #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*margin-bottom: 50px;*/
+}
+
+.container {
+  max-width: 960px;
+  margin: 10px auto;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  width: 200px;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(75, 108, 184);
+  cursor: pointer;
+}
+
+
+////// Typography ////////
+
+h1, h2 {
+  text-align: center;
+}
+
+h3 {
+  /*margin: 0 0 5px 0;*/
+  color: rgb(75, 108, 184);
+}
+
+////// All Mountains ////////
+
+.mountains-list {
+  list-style: none;
+}
+
+.mountains-list a {
+  text-decoration: none;
+}
+
+.mountains-list li {
+  display: inline-block;
+  width: 49.79%;
+  color: rgb(255, 255, 255);
+}
+
+.mountains-list li.odd {
+  width: 100%;
+}
+
+.mountain-name {
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(75, 108, 184);
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+}
+
+.mountain {
+  text-align: center;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: .8;
+  margin-bottom: 4px;
+}
+
+.mountain:hover {
+  opacity: 1;
+}
+
+
+////// Show Mountain ////////
+
+.hero-image {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-name {
+  text-align: center;
+  font-size: 6em;
+  text-shadow: 2px 2px 5px rgb(110, 110, 110);
+  line-height: 600px;
+  color: rgb(255, 255, 255);
+}
+
+////// New/Edit Mountain ////////
+
+form {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+input, textarea {
+  display: block;
+  width: 700px;
+  margin: 10px auto 30px auto;
+  border: 1px solid rgb(222, 222, 222);
+}
+
+button, .controls a, input[type=submit] {
+  font-family: 'Martel', serif;
+  font-size: 1em;
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: rgb(75, 108, 184);
+  border: 0;
+  color: rgb(255, 255, 255);
+}
+
+button:hover, input[type=submit]:hover {
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+}
+
+.info-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mountain-info {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+p.info {
+  text-align: justify;
+}
+
+.controls {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.controls a {
+  text-decoration: none;
+}
+
+.controls button {
+  display: inline-block;
+}
+
+
+
+////// Media Query ////////
+@media only screen
+  and (max-device-width: 960px)
+  {
+  .mountains-list li {
+    width: 100%;
+  }
+}

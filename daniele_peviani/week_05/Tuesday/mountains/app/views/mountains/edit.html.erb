@@ -1,0 +1,39 @@
+<h1>New Mountain</h1>
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+  <label>
+    Name
+    <input type="text" name="mountain[name]" required autofocus value="<%= @mountain.name %>">
+  </label>
+
+  <label>
+    Image
+    <input type="url" name="mountain[image]" required value="<%= @mountain.image %>">
+  </label>
+
+  <label>
+    Elevation
+    <input type="number" name="mountain[elevation]" required value="<%= @mountain.elevation %>">
+  </label>
+
+  <label>
+    Mountain Range
+    <input type="text" name="mountain[mountain_range]" required value="<%= @mountain.mountain_range %>">
+  </label>
+
+  <label>
+    Country
+    <input type="text" name="mountain[country]" required value="<%= @mountain.country %>">
+  </label>
+
+  <label>
+    First Ascent
+    <input type="date" name="mountain[first_ascent]"  value="<%= @mountain.first_ascent %>">
+  </label>
+
+  <label>
+    Info
+    <textarea type="text" rows="10" name="mountain[info]" required><%= @mountain.info %></textarea>
+  </label>
+
+  <button>Update</button>
+</form>

@@ -1,0 +1,28 @@
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+  <label>
+    name:
+    <input type="text" name="mountain[name]" required autofocus value="<%= @mountain.name %>">
+  </label>
+
+  <label>
+    Country:
+    <input type="text" name="mountain[country]" value="<%= @mountain.country %>">
+  </label>
+
+  <label>
+    height:
+    <input type="number" name="mountain[height]" value="<%= @mountain.height %>">
+  </label>
+
+  <label>
+    image:
+    <input type="url" name="mountain[image]" value="<%= @mountain.image %>">
+  </label>
+
+  <label>
+    facts:
+    <input type="text" name="mountain[facts]" value="<%= @mountain.facts %>">
+  </label>
+
+  <button>Update mountain</button>
+</form>

@@ -1,0 +1,10 @@
+<h1>Oceans</h1>
+
+<ul class = "main_list">
+  <% @oceans.each do |ocean| %>
+
+<div class='main_box' style = "background-image: url('<%=ocean.image%>')" >
+<%= link_to ocean.name, ocean_path(ocean.id) %>
+</div>
+  <% end %>
+</ul>
