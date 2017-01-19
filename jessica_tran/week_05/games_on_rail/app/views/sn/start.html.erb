@@ -1,0 +1,16 @@
+<h1>Secret Number</h1>
+<!--
+<form action="/sn/result">
+  <input type="text" placeholder="Guess a number" name="guess">
+  <button>Go!</button>
+</form> -->
+<h3>Guess a number </h3>
+<form action="/sn/result">
+  <select name="guess">
+    <option></option>
+    <% @numbers.each do |n| %>
+      <option value= "<%=n%>" ><%=n%></option>
+    <% end %>
+  </select>
+  <button>Go!</button>
+</form>

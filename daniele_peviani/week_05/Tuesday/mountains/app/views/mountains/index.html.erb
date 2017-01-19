@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Mountains</h1>
+  <ul class="mountains-list">
+    <% @mountains.each_with_index do |mountain, index| %>
+      <li <%= "class=odd" if @mountains.size.odd? && index == 0 %> >
+        <div class="mountain-name"><%= mountain.name %>
+        </div>
+        <a href="<%= mountain_path(mountain.id) %>">
+          <div class="mountain" style="background-image: url('<%= mountain.image%>')">
+          </div>
+        </a>
+      </li>
+
+    <% end %>
+  </ul>
+</div>

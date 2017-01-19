@@ -1,0 +1,27 @@
+<%= form_for @director do |f| %>
+
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :born %>
+  <%= f.text_field :born %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+</fieldset>
+
+<fieldset class = 'button'>
+  <%= f.submit %>
+</fieldset>
+
+<% end %>

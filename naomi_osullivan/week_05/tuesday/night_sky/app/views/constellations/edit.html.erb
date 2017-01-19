@@ -1,0 +1,28 @@
+<form action="<%= constellation_path(@constellation)%>" method="post">
+  <label>
+    Name:
+    <input type="text" name="constellation[name]" required autofocus value="<%= @constellation.name%>">
+  </label>
+  <label>
+    Family:
+    <input type="text" name="constellation[family]" value="<%= @constellation.family%>">
+  </label>
+  <label>
+    Origin:
+    <input type="text" name="constellation[origin]" value="<%= @constellation.origin%>">
+  </label>
+  <label>
+    Meaning
+    <input type="text" name="constellation[meaning]" value="<%= @constellation.meaning%>">
+  </label>
+  <label>
+    Brightest Star:
+    <input type="text" name="constellation[brightest_star]" value="<%= @constellation.brightest_star%>">
+  </label>
+  <label>
+    Image:
+    <input type="url" name="constellation[image]" value="<%= @constellation.image%>">
+  </label>
+  <button>Update Constellation</button>
+
+</form>
