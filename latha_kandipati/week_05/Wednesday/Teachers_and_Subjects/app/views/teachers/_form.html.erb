@@ -1,0 +1,38 @@
+<%= form_for @teacher do |t| %>
+
+<fieldset>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+</fieldset>
+
+<fieldset>
+  <%= t.label :expertise %>
+  <%= t.text_field :expertise %>
+</fieldset>
+
+<fieldset>
+  <%= t.label :description %>
+  <%= t.text_area :description %>
+</fieldset>
+
+<fieldset>
+  <%= t.label :address %>
+  <%= t.text_area :address %>
+</fieldset>
+
+<fieldset>
+  <%= t.label :contact %>
+  <%= t.text_area :contact %>
+</fieldset>
+
+<fieldset>
+  <%= t.label :image %>
+  <%= t.url_field :image %>
+</fieldset>
+
+<fieldset>
+  <label></label>
+  <%= t.submit %>
+</fieldset>
+
+<% end %>
