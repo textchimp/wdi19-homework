@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MountainsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <img class="bg" src="/assets/bg_mountains.jpg" alt="">
+  <!-- <div class="navbar"> -->
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "All mountains", mountains_path %>
+    <%= link_to "New mountain", mountains_new_path %>
+  </nav>
+  <!-- </div> -->
+  <%= yield %>
+
+<!-- <%= video_tag "https://youtu.be/Dh3J8MDzSYY", autoplay:true %> -->
+<audio id="myAudio" autoplay loop>
+ <source src='/Billy_R_The_moutain.mp3' type="audio/mpeg">
+</audio>
+<input type="checkbox" name="un-mute" id="un-mute" onclick='togglePlayAudio()'>
+<label for="un-mute" class="unmute">
+    <img class="sound" src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg" alt="Mute_Icon.svg" title="Mute icon">
+</label>
+<label for="un-mute" class="mute">
+    <img class="sound" src="http://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg" alt="Speaker_Icon.svg" title="Unmute/speaker icon">
+</label>
+
+<script>
+var song = document.getElementById('myAudio');
+function togglePlayAudio()
+{
+  return song.paused ? song.play() : song.pause();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<h1><%= @movie.title %></h1>
+
+<div class="flex_box">
+  <div class="image_box">
+  <%= image_tag @movie.image, :class => "show_image" %>
+  </div>
+
+<div class="show_box">
+  <li class="director">Director: <%= link_to @movie.director.name, @movie.director unless @movie.director.nil? %></li>
+  <li>Year: <%= @movie.year %></li>
+  <li>Rating: <%= @movie.rating %></li>
+  <li>Plot: <%= @movie.plot %></li>
+
+    <div class="controls">
+    <%= link_to "Edit Movie", edit_movie_path(@movie) %>
+    <%= link_to "Delete Movie", @movie, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+    </div>
+</div>
+
+</div>

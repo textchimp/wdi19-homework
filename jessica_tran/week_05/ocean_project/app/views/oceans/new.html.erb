@@ -1,0 +1,43 @@
+
+<h1>New Ocean</h1>
+
+<form class= "ocean_form" action="<%= oceans_path %>" method="post">
+
+<label>
+  Name
+  <input type="text" name="ocean[name]" required autofocus>
+</label>
+
+<label>
+  Location
+  <input type="text" name="ocean[location]">
+</label>
+
+<label>
+  Area
+  <input type="text" name="ocean[area]">
+</label>
+
+<label>
+  Volume
+  <input type="text" name="ocean[volume]">
+</label>
+
+<label>
+  Depth
+  <input type="text" name="ocean[depth]">
+</label>
+
+<label>
+  Coastline
+  <input type="text" name="ocean[coastline]">
+</label>
+
+<label>
+  Image URL
+  <input type="url" name="ocean[image]">
+</label>
+
+<button>Create Ocean</button>
+
+</form>
