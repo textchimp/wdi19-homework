@@ -1,0 +1,16 @@
+<h1><%= @mainland.name %></h1>
+
+<%= image_tag @mainland.image, :class => 'feature' %>
+<ul>
+  <li><%= @mainland.name %></li>
+  <li><%= @mainland.population %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit mainland", edit_mainland_path(@mainland) %>
+  <%= link_to "Delete mainland", @mainland, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</div>
+
+<% @mainland.countries.each do |country| %>
+  <%= link_to image_tag(country.image, :class => 'thumb'), country %>
+<% end %>
