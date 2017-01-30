@@ -1,0 +1,23 @@
+<h1> <%= @star.name %></h1>
+
+<p><%= @star.category %></p>
+
+<!-- add constellation and constellation image -->
+
+
+<% unless @star.constellation.nil? %>
+
+  <p>Constellation:
+  </p>
+  <p>    <%= @star.constellation.name %>
+</p>
+<%end%>
+
+
+
+
+<div class="controls">
+  <%= link_to "Edit Star", star_edit_path(@star.id)%>
+  <%= button_to "Delete Star", star_delete_path(@star.id), :method => 'post'%>
+
+</div>

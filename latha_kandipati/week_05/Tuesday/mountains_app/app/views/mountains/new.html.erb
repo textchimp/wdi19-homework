@@ -1,0 +1,24 @@
+<h1>New Mountain</h1>
+<form action="<%= mountains_path %>" method="post">
+  <label>
+    Name:
+    <input type="text" name="mountain[name]" placeholder="Name of the mountain" required autofocus>
+  </label>
+  <label>
+    Image:
+    <input type="url" name="mountain[image]" placeholder="URL (https://...)">
+  </label>
+  <label>
+    State:
+    <input type="text" name="mountain[state]" placeholder="State in Australia where the mountains is">
+  </label>
+  <label>
+    Location:
+    <input type="text" name="mountain[location]" placeholder="location of the mountain">
+  </label>
+  <label>
+    Elevation:
+    <input type="number" name="mountain[elevation]" placeholder="Height of the mountain">
+  </label>
+  <button>Create mountain</button>
+</form>
