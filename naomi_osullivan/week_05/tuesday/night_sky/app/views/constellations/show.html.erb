@@ -1,0 +1,21 @@
+<h1> <%= @constellation.name %></h1>
+<p>FAMILY:</p>
+<p><%=@constellation.family%></p>
+<p>ORIGIN:</p>
+<p><%=@constellation.origin%></p>
+<p>MEANING:</p>
+<p><%=@constellation.meaning%></p>
+<p>BRIGHTEST STAR:</p>
+<p><%=@constellation.brightest_star%></p>
+
+<p>IMAGE:</p>
+<% unless @constellation.image.nil? %>
+<%= image_tag @constellation.image%>
+<%end%>
+
+
+<div class="controls">
+  <%= link_to "Edit Constellation", constellation_edit_path(@constellation.id)%>
+  <%= button_to "Delete Constellation", constellation_delete_path(@constellation.id), :method => 'post'%>
+
+</div>

@@ -1,0 +1,13 @@
+fieldset {
+  border: none;
+}
+
+label {
+  min-width: 85px;
+  display: inline-block;
+  text-align: right;
+}
+
+.thumb {
+  max-width: 10em;
+}

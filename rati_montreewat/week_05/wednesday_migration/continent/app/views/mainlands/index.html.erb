@@ -1,0 +1,8 @@
+<h1>Mainlands</h1>
+<% @mainlands.each do |mainland| %>
+  <%= image_tag mainland.image, :class => 'thumb' %>
+  <ul>
+    <li><%= link_to mainland.name, mainland %></li>
+    <li><%= mainland.population %></li>
+  </ul>
+<% end %>

@@ -1,0 +1,23 @@
+body {
+  background-color: #FF69B4;
+  border: 10px solid black;
+}
+
+.container {
+  width: 600px;
+  margin: 80px auto;
+  height: 600px;
+  background-color: #FFD1E8;
+  /*opacity: 0.5;*/
+  border: 10px solid white;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+div .search {
+  margin: 0 auto;
+  text-align: center;
+}

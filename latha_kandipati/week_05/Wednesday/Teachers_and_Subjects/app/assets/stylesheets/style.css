@@ -1,0 +1,18 @@
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.thumb{
+  max-width: 30em;
+}
+.feature{
+  max-width: 20em;
+}
+fieldset{
+  border: none;
+}
+label{
+  min-width: 90px;
+  display: inline-block;
+  text-align: right;
+}

@@ -1,0 +1,12 @@
+<h1><%= @country.name %></h1>
+<%= image_tag @country.image, :class => 'feature' %>
+<ul>
+  <li>Mainland: <%= link_to @country.mainland.name, @country.mainland unless @country.mainland.nil? %></li>
+  <li>Name: <%= @country.name %></li>
+  <li>inhabitant: <%= @country.inhabitant %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit country", edit_country_path(@country) %>
+  <%= link_to "Delete", @work, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

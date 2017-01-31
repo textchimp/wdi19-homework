@@ -1,0 +1,146 @@
+// Place all the styles related to the Movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family: sans-serif;
+}
+
+.container {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+nav{
+  text-align: right;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+nav a, a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 1em 1em;
+  background-color: yellow;
+  margin-top: 1em;
+}
+
+a:hover, input[type="submit" i]:hover  {
+  background-color: black;
+  color: white;
+}
+
+.thumb {
+  width: 10em;
+}
+
+.new_form{
+  display: block;
+  width: 21em;
+
+}
+
+fieldset {
+  border: none;
+
+}
+
+label {
+  display: block;
+}
+
+input, #movie_director_id, input[type="submit" i]{
+  width: 100%;
+}
+
+
+input[type="submit" i] {
+  background-color: yellow;
+  border: none;
+  font-size: 0.8em;
+  padding: 1em 0;
+  text-transform: uppercase;
+}
+
+li {
+ list-style: none;
+ display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.index_box {
+  display: inline-block;
+  width: 13em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show_image{
+ width: 100%;
+border: 8px solid yellow
+}
+
+.show_box{
+  flex-grow: 1;
+  padding-left: 3em;
+}
+
+.show_box li {
+  display: block;
+}
+
+.image_box{
+  flex-grow: 1;
+  width: 50%;
+}
+
+
+.flex_box{
+  display: flex;
+  align-items: center;
+}
+
+.movies_slide{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.movies_slide image{
+
+}
+
+.movies_slide a{
+  display: inline-block;
+  background-color: white;
+  padding: 0.5em;
+  margin-right: 3px;
+  margin-top: -1.5em;
+}
+
+.movies_slide a:hover{
+  background-color: yellow;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.director a{
+padding: 0 0;
+}
+.controls_director a{
+  display: block;
+}
+
+.controls {
+  margin-top: 2em;
+
+}

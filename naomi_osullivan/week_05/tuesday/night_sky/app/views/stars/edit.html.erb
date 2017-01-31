@@ -1,0 +1,20 @@
+<form action="<%= star_path(@star)%>" method="post">
+  <label>
+    Name:
+    <input type="text" name="star[name]" required autofocus value="<%=@star.name%>">
+  </label>
+  <label>
+    Category:
+    <input type="text" name="star[category]" value="<%=@star.category%>">
+  </label>
+<!-- FIX ME add drop down menu for constellation -->
+<select name="star[constellation_id]">
+  <option></option>
+  <% Constellation.all.each do |constellation| %>
+  <option value="<%= constellation.id %>"><%= constellation.name%></option>
+  <% end %>
+
+</select>
+  <button>Update Star</button>
+
+</form>
