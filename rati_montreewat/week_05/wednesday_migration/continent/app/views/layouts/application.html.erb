@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Continent</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <%= link_to "Home", root_path %> |
+      <%= link_to "New mainlands", new_mainland_path %>
+      <%= link_to "All mainlands", mainlands_path %>
+      |
+      <%= link_to "New countries", new_country_path %>
+      <%= link_to "All countries", countries_path %>
+    </nav>
+    <%= yield %>
+  </div>
+
+</body>
+</html>
