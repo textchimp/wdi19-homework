@@ -1,0 +1,13 @@
+
+<div class="movie-wrapper container">
+  <h1>Showing search results for <%= @title %></h1>
+  <% @movie_list['Search'].each do |movie| %>
+      <div class="movie">
+        <h3><%= movie['Title'] %></h3>
+      <a href="/movie_detail?id=<%= movie['imdbID'] %>">
+        <img src="<%= movie['Poster'] %>">
+      </a>
+      </div>
+  <% end %>
+
+</div>

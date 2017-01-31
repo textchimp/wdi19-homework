@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Gloria+Hallelujah|Indie+Flower|Kumar+One|Lemonada|Lobster|Orbitron|Pacifico');
+/*font-family: 'Pacifico', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Kumar One', cursive;*/
+
+body{
+  background-color: lightgrey
+}
+.container{
+  background-color: black;
+  color: white;
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav a{
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+nav a:hover{
+  background-color: black;
+  color: lightgrey;
+}
+nav{
+  background-color: lightgrey;
+  margin: 10px auto;
+  max-width: 100%;
+}
+header{
+  margin: 0 auto;
+  margin-top: -1.5em;
+}
+header h1{
+  padding: 1em;
+}
+
+.slideshow{
+  max-width: 100%;
+  max-height: 100%
+}
+.slides{
+  width: 500px;
+  height: 500px;
+  display: inline;
+}
+
+ul{
+  list-style: none;
+}
+ul li {
+  margin-bottom: 1em;
+}
+ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Orbitron', sans-serif;
+}
+.list:hover{
+  font-size: 1.8em;
+}
+h2{
+  text-align: center;
+  font-family: 'Kumar One', cursive;
+}
+.book{
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+}
+h3{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+span{
+  font-family: 'Cinzel', serif;
+}
+
+input{
+
+}

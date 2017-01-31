@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'VT323', serif;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 65px 0px 10px 0px;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 35px;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 3em;
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  font-family: 'VT323', monospace;
+}
+
+input#fortune {
+  width: 350px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 5px;
+  text-align: left;
+
+}
+
+#luke {
+  width: 250px;
+  height: 300px;
+  cursor: url("/assets/hammer4.png"), auto;
+}
+
+
+a {
+  color: grey;
+  text-decoration: none;
+  margin: 40px;
+  font-size: 25px;
+}
+
+a:hover {
+  border-bottom: 5px solid yellow;
+  color: grey;
+}
+a#ask:hover {
+color: orange;
+}
+
+input#magicbutton {
+  background: url(/assets/luke2.png) no-repeat;
+  width: 250px;
+  height: 320px;
+  border: none;
+  cursor: url("/assets/hammer4.png"), auto;
+}
+
+div#magichammer {
+  max-width: 500px;
+  margin: auto;
+}
+div.thought {
+  position: absolute;
+  left: 730px;
+  top: 180px;
+  width: 300px;
+  padding: 20px 40px;
+  margin: 10px 10px 80px 40px;
+  border-radius: 180px;
+  font-size: 1em;
+  letter-spacing: .06em;
+  border: 1px solid green;
+}
+
+div.thought:before {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid green;
+}
+div.thought:after {
+  position: absolute;
+  content: "";
+  bottom:-30px;
+  left:0;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  border: 1px solid green;
+}
+img.thinker {
+  position: absolute;
+  left: 400px;
+  top: 300px;
+}
+input#thinker {
+  width: 40px;
+  height: 30px;
+  font-size: 18px;
+}
+button#guess {
+  font-size: 18px;
+  font-family: 'VT323', cursive;
+}
+div.throw > img {
+width: 200px;
+height: 200px
+}

@@ -1,0 +1,9 @@
+<p>
+  <ul>
+    <% @books.each do |b|%>
+      <li>
+        <a class="list" href="/books/<%=b['id']%>"><%= b['name'] %></a>
+      </li>
+    <% end %>
+  </ul>
+</p>

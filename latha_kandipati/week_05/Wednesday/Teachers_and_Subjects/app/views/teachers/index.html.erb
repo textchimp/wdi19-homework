@@ -1,0 +1,6 @@
+<h1>List of teachers</h1>
+<ul>
+  <% @teachers.each do |t| %>
+    <li><%= link_to t.name, t %></li>
+  <% end %>
+</ul>

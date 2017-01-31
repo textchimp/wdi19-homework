@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ViewHelper</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Numbers", numbers_path %>
+    <%= link_to "Text", text_path, :class => "hotdogs"%>
+    <%= link_to "Assets", assets_path %>
+    <%= link_to "URL", url_path %>  
+  </nav>
+<%= yield %>
+
+</body>
+</html>

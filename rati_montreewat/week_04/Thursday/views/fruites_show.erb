@@ -1,0 +1,11 @@
+<h2><%= @fruite['commonname'] %></h2>
+<h3>Scientific Name: <em><%= @fruite['scientificname'] %></em></h3>
+
+<% unless @fruite['image'].nil? %>
+  <img class="feature" src="<%= @fruite['image'] %>" alt="">
+<% end %>
+
+<div class="controls">
+  <a href="/fruites/<%= @fruite['id'] %>/delete">Delete</a>
+  <a href="/fruites/<%= @fruite['id'] %>/edit">Edit</a>
+</div>

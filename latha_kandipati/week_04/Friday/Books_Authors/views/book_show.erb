@@ -1,0 +1,16 @@
+<p>
+  <h2 class="book"><span>Book Name: </span><%= @book['name'] %></h2>
+  <% if !@book['author'].empty? %>
+    <h2 class="book"><span>Author: </span><%= @book['author'] %><h2>
+  <% end %>
+  <% if !@book['description'].empty? %>
+    <h3><span>Description: </span><%= @book['description'] %></h3>
+  <% end %>
+  <% if !@book['image'].empty? %>
+  <img src="<%=@book['image']%>" alt="">
+  <% end %>
+  <nav>
+    <a href="/books/<%=@book['id']%>/edit">Edit</a>
+    <a href="/books/<%=@book['id']%>/delete">Delete</a>
+  </nav>
+</p>

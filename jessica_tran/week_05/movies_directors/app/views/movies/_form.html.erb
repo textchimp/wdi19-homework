@@ -1,0 +1,37 @@
+<%= form_for @movie do |f| %>
+
+<fieldset>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :plot %>
+  <%= f.text_area :plot, :cols => '49em', :rows => '10em' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :director_id %>
+  <%= f.select :director_id, Director.pluck(:name, :id), :include_blank => true %>
+</fieldset>
+
+<fieldset class = 'button'>
+  <%= f.submit %>
+</fieldset>
+
+<% end %>

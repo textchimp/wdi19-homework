@@ -1,0 +1,11 @@
+<h2>Update info of <%= @destinations['name']%></h2>
+<form action="/destinations/<%= @destinations['id']%>" method="post">
+  <input type="text" name="name" placeholder="Enter city name" required value="<%= @destinations['name']%>">
+  <input type="text" name="country" placeholder="Enter country name" required value="<%= @destinations['country']%>">
+  <input type="number" name="population" placeholder="Enter population" required value="<%= @destinations['population']%>">
+  <input type="text" name="language" placeholder="Enter language" required value="<%= @destinations['language']%>">
+  <input type="url" name="image" placeholder="Enter image url" value="<%= @destinations['image']%>">
+  <input type="text" name="map" placeholder="Enter map embed code" value='<%= @destinations['map']%>'>
+  <textarea rows="10" name="desc" placeholder="Enter city info" required><%= @destinations['desc']%></textarea>
+  <button type="submit">Update</button>
+</form>
