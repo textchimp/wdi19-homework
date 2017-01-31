@@ -1,0 +1,25 @@
+<%= form_for @country do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :inhabitant %>
+    <%= f.text_field :inhabitant %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :mainland_id %>
+    <%= f.select :mainland_id, Mainland.pluck(:name, :id), :include_blank => true %>
+  </fieldset>
+
+<% end %>
