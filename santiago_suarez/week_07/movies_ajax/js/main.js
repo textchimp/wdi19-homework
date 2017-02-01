@@ -45,6 +45,10 @@ $(document).ready(function() {
   });
 })
 
+function resetHTML() {
+	$(".movies").empty()
+}
+
 function populateSideBar(json) {
 	for (movie in json['Search']) {
 		$("#sidebar").append(
@@ -58,6 +62,7 @@ function populateErrors() {
 }
 
 function populateMainContainer(json) {
+	resetHTML()
 	for (movie in json['Search']) {
 		$(".movies").append(
 			`<div class="well well-lg" id="${json['Search'][movie]['imdbID']}">
