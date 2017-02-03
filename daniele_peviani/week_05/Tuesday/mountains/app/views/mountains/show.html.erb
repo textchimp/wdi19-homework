@@ -1,0 +1,31 @@
+<div class="hero-image" style="background-image: url('<%= @mountain.image %>')"><div class="hero-name"><%= @mountain.name%></div>
+</div>
+
+<div class="info-wrapper">
+  <div class="mountain-info">
+    <h2>Elevation</h2>
+    <p><%= number_with_delimiter @mountain.elevation %> m</p>
+  </div>
+  <div class="mountain-info">
+    <h2>Mountain range</h2>
+    <p><%= @mountain.mountain_range %></p>
+  </div>
+  <div class="mountain-info">
+    <h2>Country</h2>
+    <p><%= @mountain.country %></p>
+  </div>
+  <% unless @mountain.first_ascent.nil? %>
+    <div class="mountain-info">
+      <h2>First ascent</h2>
+      <p><%= @mountain.first_ascent.strftime("%d-%m-%Y") %></p>
+    </div>
+  <% end %>
+  <h2>Info</h2>
+    <p class="info"><%= @mountain.info %></p>
+  </div>
+
+  <div class="controls">
+    <%= link_to "Edit Mountain", mountain_edit_path(@mountain.id)%>
+    <%= button_to "Delete Mountain", mountain_destroy_path(@mountain.id), :method => 'post' %>
+  </div>
+</div>

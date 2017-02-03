@@ -1,0 +1,22 @@
+fieldset {
+  border: none;
+}
+
+label {
+  min-width: 85px;
+  display: inline-block;
+  text-align: right;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.thumb {
+  max-width: 15em;
+}
+
+.feature {
+  max-width: 50em;
+}

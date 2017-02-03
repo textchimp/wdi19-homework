@@ -1,0 +1,11 @@
+<form action="/rsp/result">
+  <label>Throw one!</label>
+
+  <select name="move">
+    <% @possible_throw.each do |i| %>
+      <option value="<%= i%>"><%= i %></option>
+    <% end %>
+  </select>
+
+  <button>Throw</button>
+</form>

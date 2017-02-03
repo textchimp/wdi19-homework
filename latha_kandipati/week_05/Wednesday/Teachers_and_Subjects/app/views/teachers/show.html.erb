@@ -1,0 +1,17 @@
+<h1><%= @teacher.name %></h1>
+<%= image_tag @teacher.image, :class=>"feature", :alt=>@teacher.name%>
+<ul>
+  <li> Expertise: <%= @teacher.expertise %> </li>
+  <li> Descripion: <%= @teacher.description %> </li>
+  <li> Address: <%= @teacher.address %> </li>
+  <li> Contact: <%= @teacher.contact %> </li>
+  <li>Courses taught: </li>
+  <% @teacher.subjects.each do |s| %>
+    <%= link_to s.title, s %>,
+  <% end %>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit", edit_teacher_path(@teacher) %>
+  <%= link_to "Delete", @teacher, :method=>"delete", :data=>{:confirm=>"Are you sure?"} %>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NightSky</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav>
+    <%= link_to "Home", root_path%>
+    <%= link_to "Constellations", constellations_path%>
+    <%= link_to "Add Constellation", constellations_new_path%>
+    <%= link_to "Stars", stars_path %>
+    <%= link_to "Add Star", stars_new_path%>
+
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

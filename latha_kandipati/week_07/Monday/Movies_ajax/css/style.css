@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css?family=Farsan|Gloria+Hallelujah|Josefin+Sans');
+
+body{
+  background-color: #55608F;
+  color: black;
+  font-family: 'Farsan', cursive;
+}
+.container{
+  max-width: 960px;
+  height: 1000px;
+  background-color: #D6D9E5;
+  margin: 50px auto;
+  margin-top: 0px;
+}
+#heading{
+  margin-left: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.center{
+  text-align: center;
+}
+.images{
+  perspective: 2000px;
+  perspective-origin: bottom;
+}
+#wrapper{
+  text-align: center;
+  position: relative;
+}
+input{
+  width: 40%;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 5px;
+  text-align: center;
+  /*Glow*/
+  border: 1px solid #55608F;
+  transition: box-shadow 0.3s, border 0.3s;
+  /* Underline */
+  /*background-color: #D6D9E5;
+  border: none;
+  border-bottom: solid 2px #969696;
+  transition: border 0.3s;*/
+}
+input, button{
+  height: 30px;
+  font-family: 'Farsan', cursive;
+  font-size: 22px;
+}
+input:focus{
+  outline: none;
+  /*Glow*/
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+  /*Underline*/
+  /*border-bottom: solid 2px #55608F;*/
+}
+button{
+  width: 2.5em;
+  height: 2em;
+  /*border: solid 1px #55608F;*/
+  border: none;
+  background-color: #D6D9E5;
+}
+button:focus{
+  outline: none;
+}
+button:hover{
+  cursor: pointer;
+}
+.just-space{
+  margin: 50px;
+}
+
+img{
+  width: 300px;
+  height: 400px;
+}
+.slides{
+  width: 130px;
+  height: 150px;
+  margin: 0 auto;
+  margin-right: -20px;
+  margin-left: -30px;
+  padding: 0 auto;
+  transform: rotateY(60deg);
+  position: relative;
+}
+.slides:hover{
+  transform: none;
+  transform: perspective(200px) translate3d(10px,0px,100px);
+  z-index: 999;
+  cursor: pointer;
+}
+.movie-info{
+
+}
+.row{
+  text-align: center;
+  width: 70%;
+  margin: 50px auto;
+}
+.col3{
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto;
+}

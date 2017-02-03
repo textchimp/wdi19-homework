@@ -1,0 +1,12 @@
+<h2>All Books</h2>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <a href="/books/<%= book['id'] %>">
+        <%= book['name'] %>
+        <img class="thumb" src="<%= book['image'] %>" alt="">
+      </a>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,23 @@
+<%= form_for @subject do |s| %>
+
+<fieldset>
+  <%= s.label :title %>
+  <%= s.text_area :title %>
+</fieldset>
+
+<fieldset>
+  <%= s.label :category %>
+  <%= s.text_area :category %>
+</fieldset>
+
+<fieldset>
+  <%= s.label :teacher_id %>
+  <%= s.select :teacher_id, Teacher.pluck(:name, :id), :include_blank=>true %>
+</fieldset>
+
+<fieldset>
+  <label></label>
+  <%= s.submit %>
+</fieldset>
+
+<% end %>
