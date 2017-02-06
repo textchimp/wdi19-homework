@@ -1,0 +1,10 @@
+<h1>Manufacturers</h1>
+<% @manufacturers.each do |manufacturer| %>
+  <ul class="manufacturers-list">
+    <li class="manufacturers-list-item"><%= link_to image_tag(manufacturer.logo, :class => 'thumb'), manufacturer_path(manufacturer) %></li>
+    <li>Country: <%= manufacturer.country %></li>
+    <li>Founder: <%= manufacturer.founder %></li>
+    <li>Founded: <%= manufacturer.founded_year %></li>
+    <li>website: <%= manufacturer.website %></li>
+  </ul>
+<% end %>
