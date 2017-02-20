@@ -36,17 +36,14 @@ var revengeOfBadger = {
         this.shortlist.push( name );
       }
     }
-
+    return this.shortlist.length;
   },
 
   draw: function(){
 
     this.shortlist  = [];
     var winner;
-
-    this.getCandidates();
-
-    var numberOfCandidates = this.shortlist.length;
+    var numberOfCandidates = this.getCandidates();
 
     if( numberOfCandidates ===  0 ){
       // Badger has to do his own warmup if no one clapped too much
