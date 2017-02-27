@@ -35,6 +35,12 @@ app.init = function () {
   app.plane = app.createPlane();
   app.scene.add( app.plane );
 
+  app.cube = app.createCube();
+  app.scene.add( app.cube );
+
+  app.sphere = app.createSphere();
+  app.scene.add( app.sphere );
+
   document.getElementById("output").appendChild( app.renderer.domElement );
 
 } // end init()
@@ -74,5 +80,20 @@ app.createCube = function () {
   return cube;
 };
 
+app.createSphere = function () {
+
+  var sphereGeometry = new THREE.SphereGeometry( 4, 30, 30); // radius, x segments, y segments
+  var sphereMaterial = new THREE.MeshLambertMaterial({
+    color: 0x039BE5,
+    wireframe: false
+  });
+
+  var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+
+  sphere.position.set( 20, 4, 2 );
+  sphere.castShadow = true;
+
+  return sphere;
+};
 
 window.onload = app.init;
