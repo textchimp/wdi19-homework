@@ -18,7 +18,7 @@ app.init = function () {
   app.camera = new THREE.PerspectiveCamera( 60, app.width/app.height, 0.1, 1000);
 
   app.camera.position.x = -30;
-  app.camera.position.y = -40;
+  app.camera.position.y = 40;
   app.camera.position.z = 30;
   // tell camera what to look at:
   app.camera.lookAt( app.scene.position );
@@ -45,9 +45,12 @@ app.init = function () {
   app.scene.add( app.spotlight );
 
 
+  app.controls = new THREE.OrbitControls( app.camera, app.renderer.domElement );
+
   document.getElementById("output").appendChild( app.renderer.domElement );
 
-  app.renderer.render( app.scene, app.camera );
+
+  app.animate();
 
 } // end init()
 
@@ -112,6 +115,18 @@ app.createSpotlight = function () {
 
   return spotlight;
 };
+
+app.animate = function () {
+
+  app.cube.rotation.x += 0.01;
+  app.cube.rotation.y += 0.01;
+  app.cube.rotation.z += 0.01;
+
+  app.renderer.render( app.scene, app.camera );
+  requestAnimationFrame( app.animate );
+};
+
+
 
 
 window.onload = app.init;
