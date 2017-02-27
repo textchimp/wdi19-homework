@@ -32,10 +32,47 @@ app.init = function () {
   app.axes = new THREE.AxisHelper( 40 );
   app.scene.add( app.axes );
 
+  app.plane = app.createPlane();
+  app.scene.add( app.plane );
 
   document.getElementById("output").appendChild( app.renderer.domElement );
 
 } // end init()
+
+
+app.createPlane = function () {
+
+  var planeGeometry = new THREE.PlaneGeometry( 120, 20 );  // 120 x 20 plane
+  var planeMaterial = new THREE.MeshLambertMaterial({
+    color: 0xCFD8DC // kind of grey
+  });
+
+  var plane = new THREE.Mesh( planeGeometry, planeMaterial );
+
+  plane.rotation.x = -0.5 * Math.PI;   // don't ask, it's because of math
+  plane.position.x = 15;
+  plane.position.y = 0;
+  plane.position.z = 0;
+  plane.receiveShadow = true;
+
+  return plane;
+};
+
+app.createCube = function () {
+
+  var cubeGeometry = new THREE.BoxGeometry( 4, 4, 4 );
+  var cubeMaterial = new THREE.MeshLambertMaterial({
+    color: 0xFF8F00,
+    wireframe: false
+  });
+
+  var cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
+
+  cube.position.set( -4, 3, 0 );  // x y z coordinates for this object
+  cube.castShadow = true;
+
+  return cube;
+};
 
 
 window.onload = app.init;
