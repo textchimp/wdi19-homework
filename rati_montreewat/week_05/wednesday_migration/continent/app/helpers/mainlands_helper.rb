@@ -1,0 +1,2 @@
+module MainlandsHelper
+end
