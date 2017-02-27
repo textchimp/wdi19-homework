@@ -41,7 +41,13 @@ app.init = function () {
   app.sphere = app.createSphere();
   app.scene.add( app.sphere );
 
+  app.spotlight = app.createSpotlight();
+  app.scene.add( app.spotlight );
+
+
   document.getElementById("output").appendChild( app.renderer.domElement );
+
+  app.renderer.render( app.scene, app.camera );
 
 } // end init()
 
@@ -95,5 +101,17 @@ app.createSphere = function () {
 
   return sphere;
 };
+
+app.createSpotlight = function () {
+
+  var spotlight = new THREE.SpotLight( 0xFFFFFF );
+  spotlight.position.set( -10, 60, 10 );
+  spotlight.castShadow = true;
+  spotlight.shadow.mapSize.width = 2048;
+  spotlight.shadow.mapSize.height = 2048;
+
+  return spotlight;
+};
+
 
 window.onload = app.init;
