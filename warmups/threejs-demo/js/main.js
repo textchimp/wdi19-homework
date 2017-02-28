@@ -5,6 +5,8 @@ app.step = 0;
 
 app.cameraPosIndex = 0;
 
+app.lastMouseTime = 0;
+
 app.controller = {
   rotationSpeed: 0.02,
   bouncingSpeed: 0.02
@@ -65,9 +67,15 @@ app.init = function () {
   app.gui.add(app.controller, 'rotationSpeed', 0, 0.2);
   app.gui.add(app.controller, 'bouncingSpeed', 0, 0.2);
 
+  app.stats = app.addStats();
+
   app.controls = new THREE.OrbitControls( app.camera, app.renderer.domElement );
 
   document.getElementById("output").appendChild( app.renderer.domElement );
+
+  app.renderer.domElement.addEventListener('mousemove', function(){
+    app.lastMouseTime = Date.now();
+  });
 
 
   app.animate();
@@ -138,20 +146,25 @@ app.createSpotlight = function () {
 
 app.animate = function () {
 
-  app.cameraPosIndex++;
-  if( app.cameraPosIndex > 10000) {
-    app.cameraPosIndex = 0;
+  if( (Date.now() - app.lastMouseTime) > 5000 ){
+
+    app.cameraPosIndex++;
+    if( app.cameraPosIndex > 10000) {
+      app.cameraPosIndex = 0;
+    }
+
+    // app.cameraPosIndex = (app.cameraPosIndex + 1) % 10000
+
+    var camPos = app.spline.getPoint( app.cameraPosIndex / 3000 );
+    var camRot = app.spline.getTangent( app.cameraPosIndex / 3000 );
+
+    app.camera.position.set( camPos.x, camPos.y, camPos.z );
+    app.camera.rotation.set( camRot.x, camRot.y, camRot.z );
+
+    app.camera.lookAt( app.spline.getPoint( (app.cameraPosIndex + 1) / 3000 ) );
+
   }
 
-  // app.cameraPosIndex = (app.cameraPosIndex + 1) % 10000
-
-  var camPos = app.spline.getPoint( app.cameraPosIndex / 3000 );
-  var camRot = app.spline.getTangent( app.cameraPosIndex / 3000 );
-
-  // app.camera.position.set( camPos.x, camPos.y, camPos.z );
-  // app.camera.rotation.set( camRot.x, camRot.y, camRot.z );
-  //
-  // app.camera.lookAt( app.spline.getPoint( (app.cameraPosIndex + 1) / 3000 ) );
 
   app.cube.rotation.x += app.controller.rotationSpeed;
   app.cube.rotation.y += app.controller.rotationSpeed;
@@ -161,6 +174,8 @@ app.animate = function () {
   app.step += app.controller.bouncingSpeed; // increment
   app.sphere.position.x = 20 + (10 * Math.cos(app.step) );
   app.sphere.position.y =  4 + (10 * Math.abs(Math.sin(app.step)));
+
+  app.stats.update();
 
   app.renderer.render( app.scene, app.camera );
   requestAnimationFrame( app.animate );
@@ -185,7 +200,8 @@ app.createLineFromSpline = function ( spline ) {
   var sGeometry =  new THREE.Geometry();
 
   var sMaterial = new THREE.LineBasicMaterial({
-      color: 0xff00f0
+      color: 0xff00f0,
+      linewidth: 8
   });
 
   var splinePoints = spline.getPoints(10000);
@@ -208,6 +224,19 @@ app.onResize = function () {
 
   app.renderer.setSize(app.width, app.height);
 };
+
+
+app.addStats = function () {
+  var stats = new Stats();
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+
+  document.getElementById("stats").appendChild( stats.domElement );
+
+  return stats;
+}
 
 window.addEventListener("resize", app.onResize, false);
 
