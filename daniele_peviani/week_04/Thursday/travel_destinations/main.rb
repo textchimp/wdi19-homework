@@ -54,5 +54,6 @@ def query_db (sql)
   db = SQLite3::Database.new 'database.sqlite3'
   db.results_as_hash = true
   results = db.execute sql
+  db.close
   results
 end

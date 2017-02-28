@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: rgb(255, 92, 0);
+}
+
+h2 {
+  margin-top: 0;
+  color: rgb(255, 92, 0);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form {
+  text-align: center;
+}
+
+.form__select {
+  font-size: 1.3em;
+  background: none;
+  background-color: white;
+  color: rgb(255, 92, 0);
+  border: 1px solid rgb(255, 92, 0);
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.form__button {
+  font-size: 1em;
+  margin: 20px auto;
+  background: none;
+  border: 1px solid rgb(255, 92, 0);
+  background-color: white;
+  color: rgb(255, 92, 0);
+  padding: 10px;
+}
+
+.form__button:hover {
+  background-color: rgb(255, 92, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 30px;
+}
+
+.image {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  margin-left: 10%;
+}
+
+.info p {
+  margin: 0;
+}
+
+.scores{
+  margin: 20px 0;
+}
+
+.bar-container {
+  display: block;
+  width: 200px;
+  height: 20px;
+  border: 1px solid rgb(255, 92, 0);
+  position: relative;
+  margin: 5px 0 15px 0;
+}
+
+.bar-value {
+  display: none;
+  position: relative;
+  height: 100%;
+  background-color: rgb(255, 92, 0);
+}
+
+#loadingDiv {
+  display: block;
+  position: absolute;
+  z-index: 99999999;
+  height: 100%;
+  width: 960px;
+  text-align: center;
+  background-color: white;
+}
