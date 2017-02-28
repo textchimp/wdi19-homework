@@ -7,6 +7,14 @@ app.cameraPosIndex = 0;
 
 app.lastMouseTime = 0;
 
+app.numParticles = 2000;
+app.particleDistribution = 300;
+
+app.randyRange = function (min, max) {
+  var range = max - min;
+  return min + (Math.random() * range);
+};
+
 app.controller = {
   rotationSpeed: 0.02,
   bouncingSpeed: 0.02
@@ -57,6 +65,8 @@ app.init = function () {
   app.spotlight = app.createSpotlight();
   app.scene.add( app.spotlight );
 
+  app.ambient = new THREE.AmbientLight( 0x444444 );
+  app.scene.add( app.ambient );
 
   app.spline = app.createSpline();
 
@@ -120,9 +130,10 @@ app.createCube = function () {
 
 app.createSphere = function () {
 
-  var sphereGeometry = new THREE.SphereGeometry( 20,    30, 30); // radius, x segments, y segments
+  var sphereGeometry = new THREE.SphereGeometry( 20, 40, 40); // radius, x segments, y segments
   var sphereMaterial = new THREE.MeshLambertMaterial({
     color: 0xFFFFFF,
+    side: THREE.DoubleSide,
     // wireframe: true
     map: THREE.ImageUtils.loadTexture("/img/earth.jpg")
 
@@ -149,7 +160,7 @@ app.createSpotlight = function () {
 
 app.animate = function () {
 
-  if( (Date.now() - app.lastMouseTime) > 5000 ){
+  if( (Date.now() - app.lastMouseTime) > 30000 ){
 
     app.cameraPosIndex++;
     if( app.cameraPosIndex > 10000) {
@@ -219,6 +230,39 @@ app.createLineFromSpline = function ( spline ) {
 
   return new THREE.Line( sGeometry, sMaterial );
 }
+
+app.createParticleSystem = function () {
+
+  // Particles are just individual vertices in a geometry
+  // Geometry stores an arbitrary collection of bits of geometric info to make an object
+  var particles = new THREE.Geometry();
+
+  for (var i = 0; i < app.numParticles; i++) {
+
+    var x = app.randyRange( -app.particleDistribution, app.particleDistribution );
+    var y = app.randyRange( -app.particleDistribution, app.particleDistribution );
+    var z = app.randyRange( -app.particleDistribution, app.particleDistribution );
+
+    var particle = new THREE.Vector3( x, y, z );
+
+    particles.vertices.push( particle );
+  }
+
+  var particleMaterial = new THREE.PointsMaterial({
+    color: 0xFFFFFF,
+    size: 10,
+    map: THREE.ImageUtils.loadTexture("/img/snowflake.png"),
+    blending: THREE.AdditiveBlending,
+    transparent: true,
+    alphaTest: 0.5
+  });
+
+  var particleSystem = new THREE.Points( particles, particleMaterial );
+
+  return particleSystem;
+};
+
+
 
 
 
