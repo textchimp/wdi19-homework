@@ -35,7 +35,7 @@ app.init = function () {
   // how close to render things
   // how far to render things
 
-  app.camera = new THREE.PerspectiveCamera( 60, app.width/app.height, 0.1, 1000);
+  app.camera = new THREE.PerspectiveCamera( 60, app.width/app.height, 0.1, 2000);
 
   app.camera.position.x = -30;
   app.camera.position.y = 40;
@@ -72,6 +72,10 @@ app.init = function () {
 
   // app.line = app.createLineFromSpline( app.spline );
   // app.scene.add( app.line );
+
+
+  app.particleSystem = app.createParticleSystem();
+  app.scene.add( app.particleSystem );
 
 
   app.gui = new dat.GUI();
@@ -190,6 +194,8 @@ app.animate = function () {
 
   app.sphere.rotation.y += app.controller.rotationSpeed;
 
+  app.animateParticles();
+
   // app.sphere.position.x = 20 + (10 * Math.cos(app.step) );
   // app.sphere.position.y =  4 + (10 * Math.abs(Math.sin(app.step)));
 
@@ -198,6 +204,36 @@ app.animate = function () {
   app.renderer.render( app.scene, app.camera );
   requestAnimationFrame( app.animate );
 };
+
+app.animateParticles = function () {
+
+  var vertices = app.particleSystem.geometry.vertices;
+
+  for (var i = 0; i < vertices.length; i++) {
+    var vert = vertices[i];
+
+    // if( vert.y < -app.particleDistribution/2 ){
+    //     vert.y = app.particleDistribution;
+    // }
+    //
+    // vert.y -= app.controller.rotationSpeed;
+
+    var dist = Math.sqrt( vert.x*vert.x + vert.y*vert.y + vert.z*vert.z );
+
+    var force = (10.0 / (dist*dist)) * -0.05;
+
+    vert.vx += force * vert.x;
+    vert.vy += force * vert.y;
+    vert.vz += force * vert.z;
+
+    vert.x += vert.vx;
+    vert.y += vert.vy;
+    vert.z += vert.vz;
+  }
+
+  app.particleSystem.geometry.verticesNeedUpdate = true;
+};
+
 
 app.createSpline = function () {
 
@@ -237,6 +273,8 @@ app.createParticleSystem = function () {
   // Geometry stores an arbitrary collection of bits of geometric info to make an object
   var particles = new THREE.Geometry();
 
+  var particleSpeed = 0.2;
+
   for (var i = 0; i < app.numParticles; i++) {
 
     var x = app.randyRange( -app.particleDistribution, app.particleDistribution );
@@ -245,12 +283,16 @@ app.createParticleSystem = function () {
 
     var particle = new THREE.Vector3( x, y, z );
 
+    particle.vx = app.randyRange( -particleSpeed, particleSpeed );
+    particle.vy = app.randyRange( -particleSpeed, particleSpeed );
+    particle.vz = app.randyRange( -particleSpeed, particleSpeed );
+
     particles.vertices.push( particle );
   }
 
   var particleMaterial = new THREE.PointsMaterial({
     color: 0xFFFFFF,
-    size: 10,
+    size: 20,
     map: THREE.ImageUtils.loadTexture("/img/snowflake.png"),
     blending: THREE.AdditiveBlending,
     transparent: true,
@@ -260,6 +302,7 @@ app.createParticleSystem = function () {
   var particleSystem = new THREE.Points( particles, particleMaterial );
 
   return particleSystem;
+
 };
 
 
