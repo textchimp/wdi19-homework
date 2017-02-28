@@ -1,6 +1,16 @@
 
 var app = app || {};
 
+app.step = 0;
+
+app.cameraPosIndex = 0;
+
+app.controller = {
+  rotationSpeed: 0.02,
+  bouncingSpeed: 0.02
+};
+
+
 app.init = function () {
   console.log('hello my world');
 
@@ -18,7 +28,7 @@ app.init = function () {
   app.camera = new THREE.PerspectiveCamera( 60, app.width/app.height, 0.1, 1000);
 
   app.camera.position.x = -30;
-  app.camera.position.y = -40;
+  app.camera.position.y = 40;
   app.camera.position.z = 30;
   // tell camera what to look at:
   app.camera.lookAt( app.scene.position );
@@ -45,9 +55,22 @@ app.init = function () {
   app.scene.add( app.spotlight );
 
 
+  app.spline = app.createSpline();
+
+  app.line = app.createLineFromSpline( app.spline );
+  app.scene.add( app.line );
+
+
+  app.gui = new dat.GUI();
+  app.gui.add(app.controller, 'rotationSpeed', 0, 0.2);
+  app.gui.add(app.controller, 'bouncingSpeed', 0, 0.2);
+
+  app.controls = new THREE.OrbitControls( app.camera, app.renderer.domElement );
+
   document.getElementById("output").appendChild( app.renderer.domElement );
 
-  app.renderer.render( app.scene, app.camera );
+
+  app.animate();
 
 } // end init()
 
@@ -113,5 +136,79 @@ app.createSpotlight = function () {
   return spotlight;
 };
 
+app.animate = function () {
+
+  app.cameraPosIndex++;
+  if( app.cameraPosIndex > 10000) {
+    app.cameraPosIndex = 0;
+  }
+
+  // app.cameraPosIndex = (app.cameraPosIndex + 1) % 10000
+
+  var camPos = app.spline.getPoint( app.cameraPosIndex / 3000 );
+  var camRot = app.spline.getTangent( app.cameraPosIndex / 3000 );
+
+  // app.camera.position.set( camPos.x, camPos.y, camPos.z );
+  // app.camera.rotation.set( camRot.x, camRot.y, camRot.z );
+  //
+  // app.camera.lookAt( app.spline.getPoint( (app.cameraPosIndex + 1) / 3000 ) );
+
+  app.cube.rotation.x += app.controller.rotationSpeed;
+  app.cube.rotation.y += app.controller.rotationSpeed;
+  app.cube.rotation.z += app.controller.rotationSpeed;
+
+
+  app.step += app.controller.bouncingSpeed; // increment
+  app.sphere.position.x = 20 + (10 * Math.cos(app.step) );
+  app.sphere.position.y =  4 + (10 * Math.abs(Math.sin(app.step)));
+
+  app.renderer.render( app.scene, app.camera );
+  requestAnimationFrame( app.animate );
+};
+
+app.createSpline = function () {
+
+  var randomPoints = [];
+  for (var i = 0; i < 10; i++) {
+    randomPoints.push(new THREE.Vector3(
+      (Math.random() * 100) - 50,
+      (Math.random() * 100) - 50,
+      (Math.random() * 100) - 50
+    ));
+  }
+
+  return new THREE.CatmullRomCurve3( randomPoints );
+};
+
+app.createLineFromSpline = function ( spline ) {
+
+  var sGeometry =  new THREE.Geometry();
+
+  var sMaterial = new THREE.LineBasicMaterial({
+      color: 0xff00f0
+  });
+
+  var splinePoints = spline.getPoints(10000);
+
+  for (var i = 0; i < splinePoints.length; i++) {
+    sGeometry.vertices.push( splinePoints[i] );
+  }
+
+  return new THREE.Line( sGeometry, sMaterial );
+}
+
+
+
+app.onResize = function () {
+  app.width = window.innerWidth;
+  app.height = window.innerHeight;
+
+  app.camera.aspect = app.width / app.height;
+  app.camera.updateProjectionMatrix();
+
+  app.renderer.setSize(app.width, app.height);
+};
+
+window.addEventListener("resize", app.onResize, false);
 
 window.onload = app.init;
