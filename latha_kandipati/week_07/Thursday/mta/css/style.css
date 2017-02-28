@@ -1,0 +1,6 @@
+#no-input{
+  display: none;
+}
+#go:focus{
+  outline: none;
+}
