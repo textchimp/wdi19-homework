@@ -38,14 +38,15 @@ app.init = function () {
   app.renderer = new THREE.WebGLRenderer();
   app.renderer.setSize( app.width, app.height );
   app.renderer.setClearColor( 0x000000 ); // background color
-  app.renderer.shadowMap.enabled = true;
-  app.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // app.renderer.shadowMap.enabled = true;
+  // app.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-  app.axes = new THREE.AxisHelper( 40 );
-  app.scene.add( app.axes );
-
-  app.plane = app.createPlane();
-  app.scene.add( app.plane );
+  //
+  // app.axes = new THREE.AxisHelper( 40 );
+  // app.scene.add( app.axes );
+  //
+  // app.plane = app.createPlane();
+  // app.scene.add( app.plane );
 
   app.cube = app.createCube();
   app.scene.add( app.cube );
@@ -59,8 +60,8 @@ app.init = function () {
 
   app.spline = app.createSpline();
 
-  app.line = app.createLineFromSpline( app.spline );
-  app.scene.add( app.line );
+  // app.line = app.createLineFromSpline( app.spline );
+  // app.scene.add( app.line );
 
 
   app.gui = new dat.GUI();
@@ -111,24 +112,26 @@ app.createCube = function () {
 
   var cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
 
-  cube.position.set( -4, 3, 0 );  // x y z coordinates for this object
-  cube.castShadow = true;
+  cube.position.set( 0, 0, 0 );  // x y z coordinates for this object
+  // cube.castShadow = true;
 
   return cube;
 };
 
 app.createSphere = function () {
 
-  var sphereGeometry = new THREE.SphereGeometry( 4, 30, 30); // radius, x segments, y segments
+  var sphereGeometry = new THREE.SphereGeometry( 20,    30, 30); // radius, x segments, y segments
   var sphereMaterial = new THREE.MeshLambertMaterial({
-    color: 0x039BE5,
-    wireframe: false
+    color: 0xFFFFFF,
+    // wireframe: true
+    map: THREE.ImageUtils.loadTexture("/img/earth.jpg")
+
   });
 
   var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 
   sphere.position.set( 20, 4, 2 );
-  sphere.castShadow = true;
+  // sphere.castShadow = true;
 
   return sphere;
 };
@@ -136,10 +139,10 @@ app.createSphere = function () {
 app.createSpotlight = function () {
 
   var spotlight = new THREE.SpotLight( 0xFFFFFF );
-  spotlight.position.set( -10, 60, 10 );
-  spotlight.castShadow = true;
-  spotlight.shadow.mapSize.width = 2048;
-  spotlight.shadow.mapSize.height = 2048;
+  spotlight.position.set( -20, 10, 10 );
+  // spotlight.castShadow = true;
+  // spotlight.shadow.mapSize.width = 2048;
+  // spotlight.shadow.mapSize.height = 2048;
 
   return spotlight;
 };
@@ -172,8 +175,12 @@ app.animate = function () {
 
 
   app.step += app.controller.bouncingSpeed; // increment
-  app.sphere.position.x = 20 + (10 * Math.cos(app.step) );
-  app.sphere.position.y =  4 + (10 * Math.abs(Math.sin(app.step)));
+
+
+  app.sphere.rotation.y += app.controller.rotationSpeed;
+
+  // app.sphere.position.x = 20 + (10 * Math.cos(app.step) );
+  // app.sphere.position.y =  4 + (10 * Math.abs(Math.sin(app.step)));
 
   app.stats.update();
 
