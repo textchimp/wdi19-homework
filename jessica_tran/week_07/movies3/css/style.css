@@ -1,0 +1,46 @@
+body {
+
+}
+
+.form-wrapper{
+  width: 60%;
+  margin: 3em auto 0 auto;
+
+}
+
+.image{
+  height: 200px;
+}
+
+.list{
+  display: inline-block;
+  width: 60%;
+  margin-left: 2em;
+
+}
+
+#poster{
+  display: block;
+
+  margin: 0 auto;
+  background-color: black;
+}
+
+.image-holder{
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+}
+
+.holder{
+  margin-top: 2em;
+  border: 1px solid #ddd;
+  padding:2em;
+  border-radius: 20px;
+  margin-bottom: 1em;
+}
+
+#imageh{
+  border-radius: 5px;
+  height: 400px;
+}

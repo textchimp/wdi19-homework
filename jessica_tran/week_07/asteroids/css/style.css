@@ -1,0 +1,11 @@
+#listHolder{
+  display: inline-block;
+  width: 48%;
+
+}
+
+#asteroidHolder{
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}

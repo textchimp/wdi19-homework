@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asteroids</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/asteroid.js"></script>
+</head>
+<body>
+  <form>
+    <h1>Search Asteroid</h1>
+    <p>Search for Asteroids based on their closest approach date to Earth</p>
+    <input type="search" id="startDate" name="startDate" placeholder="Start Date" value="2015-09-07" required="true">
+    <button id="search">Search</button>
+  </form>
+  <div id="container">
+      <div id="listHolder"><p id="count"></p></div>
+      <div id="asteroidHolder"></div>
+  </div>
+</body>
+</html>
