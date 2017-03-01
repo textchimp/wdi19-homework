@@ -93,6 +93,7 @@ img{
   transform: perspective(200px) translate3d(10px,0px,100px);
   z-index: 999;
   cursor: pointer;
+  transition: 1s all;
 }
 .movie-info{
 

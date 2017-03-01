@@ -1,0 +1,25 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-3'>
+      <div id='sidebar'>
+        <h1>Flickr Img search</h1>
+        <%= form_tag '#', :id => 'search', class: 'form-inline' do %>
+          <div class="form-group">
+            <div class="input-group">
+              <%= search_field_tag :query, nil, :placeholder => 'butterfly', :autofocus => true, class: 'form-control' %>
+              <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+            </div>
+          </div>
+          <%= button_tag 'Search', class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class='col-md-9'>
+      <div id="images">
+        <div class="loading-more-images hidden">
+          <i class="fa fa-spinner" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+class window.Flickr
+  constructor: (form) ->
+    @form = $ form
+    @query = @form.find('#query')
+    @form.on 'submit', @_makeRequest
+
+  _makeRequest: (e) =>
+    e.preventDefault()
+
+    url = 'https://api.flickr.com/services/rest/?jsoncallback=?'
+    opts = {
+      method: 'flickr.photos.search',
+      api_key: '2f5ac274ecfac5a455f38745704ad084',
+      text: @query,
+      format: 'json'
+    }
+
+    $.getJSON url, opts
+    .then (data) =>
+      console.log 'here'
+      console.log data
+
+
+
+$(document).on 'ready', ->
+  new Flickr('form#search')

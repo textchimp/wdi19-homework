@@ -1,0 +1,16 @@
+<h1>Image search</h1>
+<%= form_tag '#', :id=> 'search' do %>
+  <%= search_field_tag :query, nil, :placeholder=> 'butterfly', :autofocus=>true, :id=>'query' %>
+  <%= button_tag 'Search', :id=>"go" %>
+<% end %>
+<br>
+<br>
+<h2 id="first-msg">Loading images...</h2>
+<h2 id="msg">Loading more images...</h2>
+<h2 id="finished">No more images, try another search.</h2>
+<h2 id="no-match-found">No images with this search, try with another search term.</h2>
+<h2 id="empty-string">Please enter some input.</h2>
+<div id="images">
+
+</div>
+<button id="to-top">Scroll Top</button>

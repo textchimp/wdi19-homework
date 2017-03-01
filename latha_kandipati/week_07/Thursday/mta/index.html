@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MTA SPA</title>
+  <script src="js/jQuery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/MTA1.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <h1>Welcome to MTA</h1>
+  <h2>Please select the starting point and ending points from below lists.</h2>
+  <!-- Selection menus for from line and from stop -->
+  <select name="fromLine" id="fromLine">
+   <option> Choose From Line </option>
+   <option value="N"> Line N</option>
+   <option value="L"> Line L</option>
+   <option value="6"> Line 6</option>
+  </select>
+
+  <select name="fromStop" id="fromStop">
+    <option>Please choose from below</option>
+  </select>
+  <br><br><br>
+  <!-- Selection menus for to line and to stops -->
+  <select name="toLine" id="toLine">
+   <option> Choose From Line </option>
+   <option value="N"> Line N</option>
+   <option value="L"> Line L</option>
+   <option value="6"> Line 6</option>
+  </select>
+
+  <select name="toStop" id="toStop">
+    <option>Please choose from below</option>
+  </select>
+  <br><br><br>
+  <!-- Button to get the route -->
+  <button id="go">Get route</button>
+
+  <h2 id="no-input">Please select valid input in all the drop down lists.</h2>
+
+</body>
+</html>
