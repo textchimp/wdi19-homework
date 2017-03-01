@@ -7,7 +7,7 @@ app.cameraPosIndex = 0;
 
 app.lastMouseTime = 0;
 
-app.numParticles = 2000;
+app.numParticles = 200000;
 app.particleDistribution = 300;
 
 app.randyRange = function (min, max) {
@@ -164,24 +164,24 @@ app.createSpotlight = function () {
 
 app.animate = function () {
 
-  if( (Date.now() - app.lastMouseTime) > 30000 ){
-
-    app.cameraPosIndex++;
-    if( app.cameraPosIndex > 10000) {
-      app.cameraPosIndex = 0;
-    }
-
-    // app.cameraPosIndex = (app.cameraPosIndex + 1) % 10000
-
-    var camPos = app.spline.getPoint( app.cameraPosIndex / 3000 );
-    var camRot = app.spline.getTangent( app.cameraPosIndex / 3000 );
-
-    app.camera.position.set( camPos.x, camPos.y, camPos.z );
-    app.camera.rotation.set( camRot.x, camRot.y, camRot.z );
-
-    app.camera.lookAt( app.spline.getPoint( (app.cameraPosIndex + 1) / 3000 ) );
-
-  }
+  // if( (Date.now() - app.lastMouseTime) > 30000 ){
+  //
+  //   app.cameraPosIndex++;
+  //   if( app.cameraPosIndex > 10000) {
+  //     app.cameraPosIndex = 0;
+  //   }
+  //
+  //   // app.cameraPosIndex = (app.cameraPosIndex + 1) % 10000
+  //
+  //   var camPos = app.spline.getPoint( app.cameraPosIndex / 3000 );
+  //   var camRot = app.spline.getTangent( app.cameraPosIndex / 3000 );
+  //
+  //   app.camera.position.set( camPos.x, camPos.y, camPos.z );
+  //   app.camera.rotation.set( camRot.x, camRot.y, camRot.z );
+  //
+  //   app.camera.lookAt( app.spline.getPoint( (app.cameraPosIndex + 1) / 3000 ) );
+  //
+  // }
 
 
   app.cube.rotation.x += app.controller.rotationSpeed;
@@ -220,7 +220,7 @@ app.animateParticles = function () {
 
     var dist = Math.sqrt( vert.x*vert.x + vert.y*vert.y + vert.z*vert.z );
 
-    var force = (10.0 / (dist*dist)) * -0.05;
+    var force = (10.0 / (dist*dist)) * -app.controller.rotationSpeed; //0.05;
 
     vert.vx += force * vert.x;
     vert.vy += force * vert.y;
@@ -277,8 +277,8 @@ app.createParticleSystem = function () {
 
   for (var i = 0; i < app.numParticles; i++) {
 
-    var x = app.randyRange( -app.particleDistribution, app.particleDistribution );
-    var y = app.randyRange( -app.particleDistribution, app.particleDistribution );
+    var x = 200; //app.randyRange( -app.particleDistribution, app.particleDistribution );
+    var y = 200; //app.randyRange( -app.particleDistribution, app.particleDistribution );
     var z = app.randyRange( -app.particleDistribution, app.particleDistribution );
 
     var particle = new THREE.Vector3( x, y, z );
